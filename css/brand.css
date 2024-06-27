@@ -1,0 +1,1616 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+@media (min-width: 1500px) {
+  /*header*/
+  header {
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+    box-shadow: 0 10px 6px -6px #777;
+  }
+  header ul {
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #f5f5f5;
+    align-items: center;
+  }
+  header h1 {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 50px;
+    margin-left: 40px;
+  }
+  header li a {
+    font-family: "Antic Slab", serif;
+  }
+  header h3 {
+    padding: 0 20px;
+  }
+  /* visual */
+  #visual {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #f0f0f0; */
+  }
+  #visual h2 {
+    color: #333;
+    font-size: 60px;
+    position: absolute;
+    top: 200px;
+    right: 20px;
+    z-index: 10;
+    transition: color 1s ease;
+  }
+  .Vimg img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    transition: border-radius 1s ease;
+  }
+  .Vimg {
+    margin-top: 80px;
+    width: 30%; /* Initial small size */
+    height: 30%;
+    transition: width 0.2s ease, height 0.2s ease, top 0.2s ease, left 0.2s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .content {
+    height: 200vh;
+    background-color: #ccc;
+  }
+  /* container1 */
+  #container1 {
+    position: relative;
+  }
+
+  #pGroup1 {
+    display: block;
+  }
+  .pGroup.active {
+    display: block;
+  }
+
+  #pGroup2 {
+    display: none;
+    position: absolute;
+    top: 210px;
+    animation: fadeInUp 0.5s ease forwards;
+  }
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  #container1 ul {
+    display: flex;
+  }
+
+  #container1 h2 {
+    font-size: 60px;
+    padding: 130px 0 0px 100px;
+  }
+
+  #container1 p {
+    font-size: 32px;
+    padding: 50px 0 50px 100px;
+    line-height: 60px;
+  }
+
+  #container1 img {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 550px;
+    height: 900px;
+  }
+  #container1 .bgTransition {
+    background-color: #000;
+    width: 550px;
+    height: 900px;
+    position: absolute;
+    top: 80px;
+    right: 0;
+  }
+  #container1 .soap {
+    display: none;
+  }
+  .soap.active {
+    display: block;
+  }
+  /* container2 */
+  #container2 {
+    width: 100%;
+    position: absolute;
+    top: 1900px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #container2 > ul {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  #container2 > ul > li img {
+    width: 150px;
+  }
+
+  #container2 h2 {
+    font-size: 50px;
+    text-align: center;
+  }
+
+  .hidden {
+    opacity: 0;
+    transform: translateY(50px); /* 아래에서 위로 올라오는 초기 위치 설정 */
+    transition: opacity 0.6s, transform 0.6s; /* 애니메이션 효과 설정 */
+  }
+
+  /* .hidden 요소가 위로 움직이는 효과 */
+  .hidden.move-up {
+    opacity: 1;
+    transform: translateY(0); /* 위로 이동 */
+  }
+
+  /* .hidden 요소가 아래로 움직이는 효과 */
+  .hidden.move-down {
+    opacity: 0;
+    transform: translateY(50px); /* 아래로 이동 */
+  }
+
+  .visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  #container2 > img {
+    width: 50%;
+    position: absolute;
+    left: 25%;
+    transition: width 0.5s ease;
+  }
+
+  #container2 p {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 600px;
+    line-height: 60px;
+  }
+
+  /* container3 */
+  #container3 {
+    width: 100%;
+    position: absolute;
+    top: 3300px;
+    display: flex;
+    justify-content: center;
+  }
+
+  #container3 .tabBox {
+    display: flex;
+    justify-content: space-around; /* 각 탭을 동일한 간격으로 정렬 */
+    width: 100%;
+  }
+
+  #container3 .tabBox li {
+    width: 90%; /* 각 탭 너비 설정 */
+    text-align: center;
+    position: absolute;
+  }
+  #container3 .tabBox img {
+    position: relative;
+  }
+  #container3 .tabBox .Limg {
+    left: -40%;
+  }
+  #container3 .tabBox .Rimg {
+    left: 40%;
+  }
+  #container3 li {
+    list-style: none;
+  }
+
+  #container3 li img {
+    width: 300px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+
+  #container3 li img:hover {
+    opacity: 0.5;
+  }
+
+  #container3 .tabBG {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%; /* 탭의 너비에 맞춤 */
+    margin-top: 80px; /* 위쪽 마진 조정 */
+    padding: 20px; /* 안쪽 여백 설정 */
+    box-sizing: border-box; /* 박스 모델 변경 */
+    background-color: #fff; /* 배경색 설정 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    display: none; /* 초기에는 숨김 */
+    opacity: 0; /* 초기에는 투명도 0으로 설정 */
+    transition: opacity 0.3s ease; /* 투명도 전환 효과 */
+    height: 320px;
+  }
+
+  #container3 .tabBox li:hover .tabBG {
+    display: block; /* 호버 시 나타나게 함 */
+    opacity: 1; /* 투명도 1로 설정 */
+  }
+
+  #container3 li.active .tabBG {
+    /* z-index: 10; */
+    display: block;
+    opacity: 1;
+  }
+  #container3 li.active img {
+    opacity: 0.5;
+  }
+
+  #container3 p {
+    font-size: 35px;
+    color: #333;
+    line-height: 80px; /* 행간 조정 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+    padding-top: 30px;
+  }
+
+  /*footer*/
+  footer {
+    width: 100%;
+    background-color: #000000;
+    color: #fff;
+    margin-top: 2600px;
+    position: absolute;
+    top: 1500px;
+  }
+
+  footer .fAll {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 50px;
+  }
+
+  footer .fMenu {
+    display: flex;
+    font-weight: bold;
+    gap: 20px;
+    cursor: pointer;
+  }
+  footer .fMenu li:hover {
+    color: #aaa;
+  }
+
+  footer h1 {
+    margin: 50px 0px 30px;
+    font-size: 50px;
+    font-family: "Archivo Black", sans-serif;
+  }
+
+  footer .fAll p {
+    font-size: 12px;
+  }
+
+  footer .icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+  }
+  footer .icons > li:hover {
+    opacity: 0.5;
+  }
+  footer .call p {
+    font-weight: bold;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1499px) {
+  /*header*/
+  header {
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+    box-shadow: 0 10px 6px -6px #777;
+  }
+  header ul {
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #f5f5f5;
+    align-items: center;
+  }
+  header h1 {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 50px;
+    margin-left: 40px;
+  }
+  header li a {
+    font-family: "Antic Slab", serif;
+  }
+  header h3 {
+    padding: 0 20px;
+  }
+  /* visual */
+  #visual {
+    width: 100%;
+    height: 75vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #f0f0f0; */
+  }
+  #visual h2 {
+    color: #333;
+    font-size: 45px;
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    z-index: 10;
+    transition: color 1s ease;
+  }
+  .Vimg img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    transition: border-radius 1s ease;
+  }
+  .Vimg {
+    margin-top: 80px;
+    width: 30%; /* Initial small size */
+    height: 30%;
+    transition: width 0.2s ease, height 0.2s ease, top 0.2s ease, left 0.2s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* container1 */
+  #container1 {
+    position: relative;
+  }
+
+  #pGroup1 {
+    display: block;
+  }
+  .pGroup.active {
+    display: block;
+  }
+
+  #pGroup2 {
+    display: none;
+    position: absolute;
+    top: 210px;
+    animation: fadeInUp 0.5s ease forwards;
+  }
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  #container1 ul {
+    display: flex;
+  }
+
+  #container1 h2 {
+    font-size: 45px;
+    padding: 130px 0 0px 50px;
+  }
+
+  #container1 p {
+    font-size: 28px;
+    padding: 30px 0 30px 50px;
+    line-height: 60px;
+  }
+
+  #container1 img {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 450px;
+    height: 700px;
+  }
+  #container1 .bgTransition {
+    background-color: #000;
+    width: 450px;
+    height: 700px;
+    position: absolute;
+    top: 80px;
+    right: 0;
+  }
+  #container1 .soap {
+    display: none;
+  }
+  .soap.active {
+    display: block;
+  }
+  /* container2 */
+  #container2 {
+    width: 100%;
+    position: absolute;
+    top: 1700px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #container2 > ul {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  #container2 > ul > li img {
+    width: 100px;
+  }
+
+  #container2 h2 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .hidden {
+    opacity: 0;
+    transform: translateY(50px); /* 아래에서 위로 올라오는 초기 위치 설정 */
+    transition: opacity 0.6s, transform 0.6s; /* 애니메이션 효과 설정 */
+  }
+
+  /* .hidden 요소가 위로 움직이는 효과 */
+  .hidden.move-up {
+    opacity: 1;
+    transform: translateY(0); /* 위로 이동 */
+  }
+
+  /* .hidden 요소가 아래로 움직이는 효과 */
+  .hidden.move-down {
+    opacity: 0;
+    transform: translateY(50px); /* 아래로 이동 */
+  }
+
+  .visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  #container2 > img {
+    width: 50%;
+    position: absolute;
+    left: 25%;
+    transition: width 0.5s ease;
+  }
+
+  #container2 p {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 380px;
+    line-height: 60px;
+  }
+
+  /* container3 */
+  #container3 {
+    width: 100%;
+    position: absolute;
+    top: 2850px;
+    display: flex;
+    justify-content: center;
+  }
+
+  #container3 .tabBox {
+    display: flex;
+    justify-content: space-around; /* 각 탭을 동일한 간격으로 정렬 */
+    width: 100%;
+  }
+
+  #container3 .tabBox li {
+    width: 90%; /* 각 탭 너비 설정 */
+    text-align: center;
+    position: absolute;
+  }
+  #container3 .tabBox img {
+    position: relative;
+  }
+  #container3 .tabBox .Limg {
+    left: -40%;
+  }
+  #container3 .tabBox .Rimg {
+    left: 40%;
+  }
+  #container3 li {
+    list-style: none;
+  }
+
+  #container3 li img {
+    width: 200px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+
+  #container3 li img:hover {
+    opacity: 0.5;
+  }
+
+  #container3 .tabBG {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%; /* 탭의 너비에 맞춤 */
+    margin-top: 80px; /* 위쪽 마진 조정 */
+    padding: 20px; /* 안쪽 여백 설정 */
+    box-sizing: border-box; /* 박스 모델 변경 */
+    background-color: #fff; /* 배경색 설정 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    display: none; /* 초기에는 숨김 */
+    opacity: 0; /* 초기에는 투명도 0으로 설정 */
+    transition: opacity 0.3s ease; /* 투명도 전환 효과 */
+    height: 320px;
+  }
+
+  #container3 .tabBox li:hover .tabBG {
+    display: block; /* 호버 시 나타나게 함 */
+    opacity: 1; /* 투명도 1로 설정 */
+  }
+
+  #container3 li.active .tabBG {
+    /* z-index: 10; */
+    display: block;
+    opacity: 1;
+  }
+  #container3 li.active img {
+    opacity: 0.5;
+  }
+
+  #container3 p {
+    font-size: 25px;
+    color: #333;
+    line-height: 80px; /* 행간 조정 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+    padding-top: 30px;
+  }
+
+  /*footer*/
+  footer {
+    width: 100%;
+    background-color: #000000;
+    color: #fff;
+    margin-top: 2600px;
+    position: absolute;
+    top: 1000px;
+  }
+
+  footer .fAll {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 50px;
+  }
+
+  footer .fMenu {
+    display: flex;
+    font-weight: bold;
+    gap: 20px;
+    cursor: pointer;
+  }
+  footer .fMenu li:hover {
+    color: #aaa;
+  }
+
+  footer h1 {
+    margin: 50px 0px 30px;
+    font-size: 50px;
+    font-family: "Archivo Black", sans-serif;
+  }
+
+  footer .fAll p {
+    font-size: 12px;
+  }
+
+  footer .icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+  }
+  footer .icons > li:hover {
+    opacity: 0.5;
+  }
+  footer .call p {
+    font-weight: bold;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  /*header*/
+  header {
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+    box-shadow: 0 10px 6px -6px #777;
+  }
+  header ul {
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #f5f5f5;
+    align-items: center;
+  }
+  header h1 {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 40px;
+  }
+  header li a {
+    font-family: "Antic Slab", serif;
+  }
+  /* visual */
+  #visual {
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #f0f0f0; */
+  }
+  #visual h2 {
+    color: #333;
+    font-size: 30px;
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    z-index: 10;
+    transition: color 1s ease;
+  }
+  .Vimg img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    transition: border-radius 1s ease;
+  }
+  .Vimg {
+    margin-top: 80px;
+    width: 30%; /* Initial small size */
+    height: 30%;
+    transition: width 0.2s ease, height 0.2s ease, top 0.2s ease, left 0.2s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* container1 */
+  #container1 {
+    position: relative;
+  }
+
+  #pGroup1 {
+    display: block;
+  }
+  .pGroup.active {
+    display: block;
+  }
+
+  #pGroup2 {
+    display: none;
+    position: absolute;
+    top: 180px;
+    animation: fadeInUp 0.5s ease forwards;
+  }
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  #container1 ul {
+    display: flex;
+  }
+
+  #container1 h2 {
+    font-size: 35px;
+    padding: 130px 0 0px 30px;
+  }
+
+  #container1 p {
+    font-size: 20px;
+    padding: 20px 0 10px 30px;
+    line-height: 50px;
+  }
+
+  #container1 img {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 250px;
+    height: 520px;
+  }
+  #container1 .bgTransition {
+    background-color: #000;
+    width: 250px;
+    height: 520px;
+    position: absolute;
+    top: 80px;
+    right: 0;
+  }
+  #container1 .soap {
+    display: none;
+  }
+  .soap.active {
+    display: block;
+  }
+  /* container2 */
+  #container2 {
+    width: 100%;
+    position: absolute;
+    top: 1450px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #container2 > ul {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  #container2 > ul > li img {
+    width: 60px;
+  }
+
+  #container2 h2 {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .hidden {
+    opacity: 0;
+    transform: translateY(50px); /* 아래에서 위로 올라오는 초기 위치 설정 */
+    transition: opacity 0.6s, transform 0.6s; /* 애니메이션 효과 설정 */
+  }
+
+  /* .hidden 요소가 위로 움직이는 효과 */
+  .hidden.move-up {
+    opacity: 1;
+    transform: translateY(0); /* 위로 이동 */
+  }
+
+  /* .hidden 요소가 아래로 움직이는 효과 */
+  .hidden.move-down {
+    opacity: 0;
+    transform: translateY(50px); /* 아래로 이동 */
+  }
+
+  .visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  #container2 > img {
+    width: 50%;
+    position: absolute;
+    left: 25%;
+    top: 50%;
+    transition: width 0.5s ease;
+  }
+
+  #container2 p {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 100px;
+    line-height: 60px;
+  }
+
+  /* container3 */
+  #container3 {
+    width: 100%;
+    position: absolute;
+    top: 2250px;
+    display: flex;
+    justify-content: center;
+  }
+
+  #container3 .tabBox {
+    display: flex;
+    justify-content: space-around; /* 각 탭을 동일한 간격으로 정렬 */
+    width: 100%;
+  }
+
+  #container3 .tabBox li {
+    width: 90%; /* 각 탭 너비 설정 */
+    text-align: center;
+    position: absolute;
+  }
+  #container3 .tabBox img {
+    position: relative;
+  }
+  #container3 .tabBox .Limg {
+    left: -40%;
+  }
+  #container3 .tabBox .Rimg {
+    left: 40%;
+  }
+  #container3 li {
+    list-style: none;
+  }
+
+  #container3 li img {
+    width: 150px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+
+  #container3 li img:hover {
+    opacity: 0.5;
+  }
+
+  #container3 .tabBG {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%; /* 탭의 너비에 맞춤 */
+    margin-top: 50px; /* 위쪽 마진 조정 */
+    padding: 20px; /* 안쪽 여백 설정 */
+    box-sizing: border-box; /* 박스 모델 변경 */
+    background-color: #fff; /* 배경색 설정 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    display: none; /* 초기에는 숨김 */
+    opacity: 0; /* 초기에는 투명도 0으로 설정 */
+    transition: opacity 0.3s ease; /* 투명도 전환 효과 */
+    height: 120px;
+  }
+
+  #container3 .tabBox li:hover .tabBG {
+    display: block; /* 호버 시 나타나게 함 */
+    opacity: 1; /* 투명도 1로 설정 */
+  }
+
+  #container3 li.active .tabBG {
+    /* z-index: 10; */
+    display: block;
+    opacity: 1;
+  }
+  #container3 li.active img {
+    opacity: 0.5;
+  }
+
+  #container3 p {
+    font-size: 15px;
+    color: #333;
+    line-height: 30px; /* 행간 조정 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+  }
+
+  /*footer*/
+  footer {
+    width: 100%;
+    background-color: #000000;
+    color: #fff;
+    margin-top: 2600px;
+    position: absolute;
+    top: 150px;
+  }
+
+  footer .fAll {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 50px;
+    font-size: 10px;
+  }
+
+  footer .fMenu {
+    display: flex;
+    font-weight: bold;
+    gap: 20px;
+    cursor: pointer;
+  }
+  footer .fMenu li:hover {
+    color: #aaa;
+  }
+
+  footer h1 {
+    margin: 30px 0px 30px;
+    font-size: 30px;
+    font-family: "Archivo Black", sans-serif;
+  }
+
+  footer .fAll p {
+    font-size: 10px;
+  }
+
+  footer .icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+  }
+  footer .icons > li:hover {
+    opacity: 0.5;
+  }
+  footer .call p {
+    font-weight: bold;
+  }
+}
+@media (min-width: 550px) and (max-width: 799px) {
+  /*header*/
+  header {
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+    box-shadow: 0 10px 6px -6px #777;
+  }
+  header ul {
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #f5f5f5;
+    align-items: center;
+  }
+  header h1 {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 30px;
+    margin-left: 20px;
+  }
+  header li a {
+    font-family: "Antic Slab", serif;
+  }
+  header h3 {
+    padding: 0 10px;
+    font-size: 12px;
+  }
+  /* visual */
+  #visual {
+    width: 100%;
+    height: 40vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #f0f0f0; */
+  }
+  #visual h2 {
+    color: #333;
+    font-size: 15px;
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    z-index: 10;
+    transition: color 1s ease;
+  }
+  .Vimg img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    transition: border-radius 1s ease;
+  }
+  .Vimg {
+    margin-top: 50px;
+    width: 30%; /* Initial small size */
+    height: 30%;
+    transition: width 0.2s ease, height 0.2s ease, top 0.2s ease, left 0.2s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* container1 */
+  #container1 {
+    position: relative;
+  }
+
+  #pGroup1 {
+    display: block;
+  }
+  .pGroup.active {
+    display: block;
+  }
+
+  #pGroup2 {
+    display: none;
+    position: absolute;
+    top: 100px;
+    animation: fadeInUp 0.5s ease forwards;
+  }
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  #container1 ul {
+    display: flex;
+  }
+
+  #container1 h2 {
+    font-size: 25px;
+    padding: 70px 0 0px 10px;
+  }
+
+  #container1 p {
+    font-size: 13px;
+    padding: 10px 0 0px 10px;
+    line-height: 30px;
+  }
+
+  #container1 img {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 200px;
+    height: 290px;
+  }
+  #container1 .bgTransition {
+    background-color: #000;
+    width: 200px;
+    height: 290px;
+    position: absolute;
+    top: 50px;
+    right: 0;
+  }
+  #container1 .soap {
+    display: none;
+  }
+  .soap.active {
+    display: block;
+  }
+  /* container2 */
+  #container2 {
+    width: 100%;
+    position: absolute;
+    top: 600px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #container2 > ul {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  #container2 > ul > li img {
+    width: 30px;
+  }
+
+  #container2 h2 {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .hidden {
+    opacity: 0;
+    transform: translateY(50px); /* 아래에서 위로 올라오는 초기 위치 설정 */
+    transition: opacity 0.6s, transform 0.6s; /* 애니메이션 효과 설정 */
+  }
+
+  /* .hidden 요소가 위로 움직이는 효과 */
+  .hidden.move-up {
+    opacity: 1;
+    transform: translateY(0); /* 위로 이동 */
+  }
+
+  /* .hidden 요소가 아래로 움직이는 효과 */
+  .hidden.move-down {
+    opacity: 0;
+    transform: translateY(50px); /* 아래로 이동 */
+  }
+
+  .visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  #container2 > img {
+    width: 50%;
+    position: absolute;
+    left: 25%;
+    top: 60%;
+    transition: width 0.5s ease;
+  }
+
+  #container2 p {
+    font-size: 12px;
+    text-align: center;
+    line-height: 30px;
+  }
+
+  /* container3 */
+  #container3 {
+    width: 100%;
+    position: absolute;
+    top: 1300px;
+    display: flex;
+    justify-content: center;
+  }
+
+  #container3 .tabBox {
+    display: flex;
+    justify-content: space-around; /* 각 탭을 동일한 간격으로 정렬 */
+    width: 100%;
+  }
+
+  #container3 .tabBox li {
+    width: 90%; /* 각 탭 너비 설정 */
+    text-align: center;
+    position: absolute;
+  }
+  #container3 .tabBox img {
+    position: relative;
+  }
+  #container3 .tabBox .Limg {
+    left: -30%;
+  }
+  #container3 .tabBox .Rimg {
+    left: 30%;
+  }
+  #container3 li {
+    list-style: none;
+  }
+
+  #container3 li img {
+    width: 100px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+
+  #container3 li img:hover {
+    opacity: 0.5;
+  }
+
+  #container3 .tabBG {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%; /* 탭의 너비에 맞춤 */
+    margin-top: 50px; /* 위쪽 마진 조정 */
+    padding: 20px; /* 안쪽 여백 설정 */
+    box-sizing: border-box; /* 박스 모델 변경 */
+    background-color: #fff; /* 배경색 설정 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    display: none; /* 초기에는 숨김 */
+    opacity: 0; /* 초기에는 투명도 0으로 설정 */
+    transition: opacity 0.3s ease; /* 투명도 전환 효과 */
+    height: 120px;
+  }
+
+  #container3 .tabBox li:hover .tabBG {
+    display: block; /* 호버 시 나타나게 함 */
+    opacity: 1; /* 투명도 1로 설정 */
+  }
+
+  #container3 li.active .tabBG {
+    /* z-index: 10; */
+    display: block;
+    opacity: 1;
+  }
+  #container3 li.active img {
+    opacity: 0.5;
+  }
+
+  #container3 p {
+    font-size: 11px;
+    color: #333;
+    line-height: 30px; /* 행간 조정 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+  }
+
+  /*footer*/
+  footer {
+    width: 100%;
+    background-color: #000000;
+    color: #fff;
+    top: 1650px;
+    position: absolute;
+  }
+
+  footer .fAll {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 8px;
+  }
+
+  footer .fMenu {
+    display: flex;
+    font-weight: bold;
+    gap: 5px;
+    cursor: pointer;
+  }
+  footer .fMenu li:hover {
+    color: #aaa;
+  }
+
+  footer h1 {
+    margin: 30px 0px 30px;
+    font-size: 20px;
+    font-family: "Archivo Black", sans-serif;
+  }
+
+  footer .fAll p {
+    font-size: 7px;
+  }
+
+  footer .icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  footer .icons img {
+    width: 25px;
+  }
+  footer .icons > li:hover {
+    opacity: 0.5;
+  }
+  footer .call p {
+    font-weight: bold;
+  }
+}
+@media (max-width: 549px) {
+  /*header*/
+  header {
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+    box-shadow: 0 10px 6px -6px #777;
+  }
+  header ul {
+    height: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #f5f5f5;
+    align-items: center;
+  }
+  header h1 {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 20px;
+  }
+  header li a {
+    font-family: "Antic Slab", serif;
+  }
+  header h3 {
+    font-size: 11px;
+  }
+  /* visual */
+  #visual {
+    width: 100%;
+    height: 25vh;
+    position: relative;
+    top: -20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #f0f0f0; */
+  }
+  #visual h2 {
+    color: #333;
+    font-size: 15px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    z-index: 10;
+    transition: color 1s ease;
+  }
+  .Vimg img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    transition: border-radius 1s ease;
+  }
+  .Vimg {
+    margin-top: 50px;
+    width: 30%; /* Initial small size */
+    height: 30%;
+    transition: width 0.2s ease, height 0.2s ease, top 0.2s ease, left 0.2s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* container1 */
+  #container1 {
+    position: relative;
+    top: -20px;
+  }
+
+  #pGroup1 {
+    display: block;
+  }
+  .pGroup.active {
+    display: block;
+  }
+
+  #pGroup2 {
+    display: none;
+    position: absolute;
+    top: 100px;
+    animation: fadeInUp 0.5s ease forwards;
+  }
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  #container1 ul {
+    display: flex;
+  }
+
+  #container1 h2 {
+    font-size: 25px;
+    padding: 70px 0 0px 10px;
+  }
+
+  #container1 p {
+    font-size: 13px;
+    padding: 10px 0 0px 10px;
+    line-height: 30px;
+  }
+  #container1 > ul > li:nth-of-type(2) {
+    background-color: #000;
+  }
+  #container1 img {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 130px;
+    height: 290px;
+  }
+  #container1 .bgTransition {
+    background-color: #000;
+    width: 130px;
+    height: 290px;
+    position: absolute;
+    top: 50px;
+    right: 0;
+  }
+  #container1 .soap {
+    display: none;
+  }
+  .soap.active {
+    display: block;
+  }
+  /* container2 */
+  #container2 {
+    width: 100%;
+    position: absolute;
+    top: 420px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #container2 > ul {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  #container2 > ul > li img {
+    width: 30px;
+  }
+
+  #container2 h2 {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .hidden {
+    opacity: 0;
+    transform: translateY(50px); /* 아래에서 위로 올라오는 초기 위치 설정 */
+    transition: opacity 0.6s, transform 0.6s; /* 애니메이션 효과 설정 */
+  }
+
+  /* .hidden 요소가 위로 움직이는 효과 */
+  .hidden.move-up {
+    opacity: 1;
+    transform: translateY(0); /* 위로 이동 */
+  }
+
+  /* .hidden 요소가 아래로 움직이는 효과 */
+  .hidden.move-down {
+    opacity: 0;
+    transform: translateY(50px); /* 아래로 이동 */
+  }
+
+  .visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  #container2 > img {
+    width: 50%;
+    position: absolute;
+    left: 25%;
+    top: 60%;
+    transition: width 0.5s ease;
+  }
+
+  #container2 p {
+    font-size: 12px;
+    text-align: center;
+    line-height: 30px;
+  }
+
+  /* container3 */
+  #container3 {
+    width: 100%;
+    position: absolute;
+    top: 1100px;
+    display: flex;
+    justify-content: center;
+  }
+
+  #container3 .tabBox {
+    display: flex;
+    justify-content: space-around; /* 각 탭을 동일한 간격으로 정렬 */
+    width: 100%;
+  }
+
+  #container3 .tabBox li {
+    width: 90%; /* 각 탭 너비 설정 */
+    text-align: center;
+    position: absolute;
+  }
+  #container3 .tabBox img {
+    position: relative;
+  }
+  #container3 .tabBox .Limg {
+    left: -30%;
+  }
+  #container3 .tabBox .Rimg {
+    left: 30%;
+  }
+  #container3 li {
+    list-style: none;
+  }
+
+  #container3 li img {
+    width: 100px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+
+  #container3 li img:hover {
+    opacity: 0.5;
+  }
+
+  #container3 .tabBG {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%; /* 탭의 너비에 맞춤 */
+    margin-top: 50px; /* 위쪽 마진 조정 */
+    padding: 20px; /* 안쪽 여백 설정 */
+    box-sizing: border-box; /* 박스 모델 변경 */
+    background-color: #fff; /* 배경색 설정 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    display: none; /* 초기에는 숨김 */
+    opacity: 0; /* 초기에는 투명도 0으로 설정 */
+    transition: opacity 0.3s ease; /* 투명도 전환 효과 */
+    height: 120px;
+  }
+
+  #container3 .tabBox li:hover .tabBG {
+    display: block; /* 호버 시 나타나게 함 */
+    opacity: 1; /* 투명도 1로 설정 */
+  }
+
+  #container3 li.active .tabBG {
+    /* z-index: 10; */
+    display: block;
+    opacity: 1;
+  }
+  #container3 li.active img {
+    opacity: 0.5;
+  }
+
+  #container3 p {
+    font-size: 11px;
+    color: #333;
+    line-height: 30px; /* 행간 조정 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+  }
+
+  /*footer*/
+  footer {
+    width: 100%;
+    background-color: #000000;
+    color: #fff;
+    top: 1450px;
+    position: absolute;
+  }
+
+  footer .fAll {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 8px;
+  }
+
+  footer .fMenu {
+    display: flex;
+    font-weight: bold;
+    gap: 5px;
+    cursor: pointer;
+  }
+  footer .fMenu li:hover {
+    color: #aaa;
+  }
+
+  footer h1 {
+    margin: 30px 0px 30px;
+    font-size: 20px;
+    font-family: "Archivo Black", sans-serif;
+  }
+
+  footer .fAll p {
+    font-size: 7px;
+  }
+
+  footer .icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  footer .icons img {
+    width: 25px;
+  }
+  footer .icons > li:hover {
+    opacity: 0.5;
+  }
+  footer .call p {
+    font-weight: bold;
+  }
+}

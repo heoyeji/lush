@@ -1,0 +1,1164 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+body {
+  overflow-x: hidden;
+}
+
+@media (min-width: 1800px) {
+  /* header */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 1000;
+    box-shadow: 0 10px 6px -6px #777;
+    background-color: #f5f5f5;
+  }
+
+  header ul {
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  header h1 {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 50px;
+    margin: 0 40px;
+  }
+
+  header li a {
+    font-family: "Antic Slab", serif;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  header h3 {
+    margin: 0;
+  }
+
+  /* visual */
+  #visual {
+    width: 100%;
+    height: calc(100vh - 80px); /* 헤더 높이만큼 빼기 */
+    margin-top: 80px; /* 헤더 높이만큼 여백 추가 */
+    position: relative;
+  }
+
+  #visual img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: top;
+    filter: brightness(50%);
+  }
+
+  #visual h2 {
+    position: absolute;
+    bottom: 50px;
+    left: 5%;
+    color: #fff;
+    font-size: 70px;
+    line-height: 1.2;
+    animation: B20px 0.5s linear;
+  }
+
+  @keyframes B20px {
+    0% {
+      bottom: 30px;
+    }
+    100% {
+      bottom: 50px;
+    }
+  }
+
+  /* seoul */
+  .wrap {
+    display: none;
+  }
+
+  #seoul {
+    padding: 40px 200px;
+    position: relative;
+  }
+  #seoul ul,
+  #gyeonggi ul,
+  #gyeongsang ul,
+  #chungcheong ul,
+  #jeolla ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  #seoul h3,
+  #gyeonggi h3,
+  #gyeongsang h3,
+  #chungcheong h3,
+  #jeolla h3 {
+    font-size: 50px;
+    font-family: "Acme", sans-serif;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+  }
+  #seoul ul li > a,
+  #gyeonggi ul li > a,
+  #gyeongsang ul li > a,
+  #chungcheong ul li > a,
+  #jeolla ul li > a {
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #ccc;
+    padding: 10px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.25s ease-in-out;
+    display: inline-block;
+    margin: 1rem;
+    position: relative;
+    width: 240px;
+  }
+  #seoul ul li > a:hover,
+  #gyeonggi ul li > a:hover,
+  #gyeongsang ul li > a:hover,
+  #chungcheong ul li > a:hover,
+  #jeolla ul li > a:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  }
+  #seoul ul li > a.active,
+  #gyeonggi ul li > a.active,
+  #gyeongsang ul li > a.active,
+  #chungcheong ul li > a.active,
+  #jeolla ul li > a.active {
+    color: #127d00;
+    background-color: #f6fff9;
+  }
+  #seoul .wrap,
+  #gyeonggi .wrap,
+  #gyeongsang .wrap,
+  #jeolla .wrap {
+    display: none;
+    position: absolute;
+    left: 0%;
+    z-index: 5;
+    background-color: #fff;
+    width: 100%;
+    padding: 0 500px;
+  }
+  #seoul div p,
+  #gyeonggi div p,
+  #gyeongsang div p,
+  .modal div p,
+  #jeolla div p {
+    font-family: "Acme", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 30px 0;
+  }
+  #seoul div p:first-child:hover,
+  #gyeonggi div p:first-child:hover,
+  #gyeongsang div p:first-child:hover,
+  #jeolla div p:first-child:hover {
+    text-decoration: underline;
+    width: 755px;
+  }
+  .modal div p:first-child:hover {
+    text-decoration: underline;
+  }
+  #seoul img,
+  #gyeonggi img,
+  #gyeongsang img,
+  .modal img,
+  #jeolla img {
+    width: 700px;
+    height: 350px;
+  }
+  /* 모달 배경 */
+  .modalWrap {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* 배경 색상 */
+  }
+
+  /* 모달 콘텐츠 */
+  .modal {
+    position: relative;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    background-color: white;
+    justify-content: center;
+    display: flex;
+  }
+
+  /* 닫기 버튼 */
+  .close-modal {
+    color: #333;
+    position: absolute;
+    top: 5%;
+    right: 3%;
+    font-size: 20px;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+  }
+
+  .close-modal:hover,
+  .close-modal:focus {
+    color: #fff;
+    background-color: rgb(24, 24, 60);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* .wrap 요소 */
+  .wrap {
+    display: none; /* 기본적으로 숨겨진 상태 */
+  }
+  /*footer*/
+  footer {
+    width: 100%;
+    background-color: #000000;
+    color: #fff;
+    margin-top: 400px;
+  }
+
+  footer .fAll {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 50px;
+  }
+
+  footer .fMenu {
+    display: flex;
+    font-weight: bold;
+    gap: 20px;
+    cursor: pointer;
+  }
+  footer .fMenu li:hover {
+    color: #aaa;
+  }
+
+  footer h1 {
+    margin: 50px 0px 30px;
+    font-size: 50px;
+    font-family: "Archivo Black", sans-serif;
+  }
+
+  footer .fAll p {
+    font-size: 12px;
+  }
+
+  footer .icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+  }
+  footer .icons > li:hover {
+    opacity: 0.5;
+  }
+  footer .call p {
+    font-weight: bold;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1799px) {
+  /* header */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 1000;
+    box-shadow: 0 10px 6px -6px #777;
+    background-color: #f5f5f5;
+  }
+
+  header ul {
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  header h1 {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 50px;
+    margin: 0 40px;
+  }
+
+  header li a {
+    font-family: "Antic Slab", serif;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  header h3 {
+    margin: 0;
+  }
+
+  /* visual */
+  #visual {
+    width: 100%;
+    height: calc(100vh - 80px); /* 헤더 높이만큼 빼기 */
+    margin-top: 80px; /* 헤더 높이만큼 여백 추가 */
+    position: relative;
+  }
+
+  #visual img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: top;
+    filter: brightness(50%);
+  }
+
+  #visual h2 {
+    position: absolute;
+    bottom: 50px;
+    left: 5%;
+    color: #fff;
+    font-size: 70px;
+    line-height: 1.2;
+    animation: B20px 0.5s linear;
+  }
+
+  @keyframes B20px {
+    0% {
+      bottom: 30px;
+    }
+    100% {
+      bottom: 50px;
+    }
+  }
+
+  /* seoul */
+  .wrap {
+    display: none;
+  }
+
+  #seoul {
+    padding: 40px 200px;
+    position: relative;
+  }
+  #seoul ul,
+  #gyeonggi ul,
+  #gyeongsang ul,
+  #chungcheong ul,
+  #jeolla ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+  }
+  #seoul h3,
+  #gyeonggi h3,
+  #gyeongsang h3,
+  #chungcheong h3,
+  #jeolla h3 {
+    font-size: 50px;
+    font-family: "Acme", sans-serif;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+  }
+  #seoul ul li > a,
+  #gyeonggi ul li > a,
+  #gyeongsang ul li > a,
+  #chungcheong ul li > a,
+  #jeolla ul li > a {
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #ccc;
+    padding: 10px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.25s ease-in-out;
+    display: inline-block;
+    margin: 1rem;
+    position: relative;
+    width: 200px;
+  }
+  #seoul ul li > a:hover,
+  #gyeonggi ul li > a:hover,
+  #gyeongsang ul li > a:hover,
+  #chungcheong ul li > a:hover,
+  #jeolla ul li > a:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  }
+  #seoul ul li > a.active,
+  #gyeonggi ul li > a.active,
+  #gyeongsang ul li > a.active,
+  #chungcheong ul li > a.active,
+  #jeolla ul li > a.active {
+    color: #127d00;
+    background-color: #f6fff9;
+  }
+  #seoul .wrap {
+    display: none;
+    position: absolute;
+    left: -25%;
+    z-index: 5;
+    background-color: #fff;
+    width: 200%;
+    padding: 0 300px;
+  }
+  #gyeonggi .wrap,
+  #gyeongsang .wrap,
+  #jeolla .wrap {
+    display: none;
+    position: absolute;
+    left: 0%;
+    z-index: 5;
+    background-color: #fff;
+    width: 200%;
+    height: 600px;
+    padding: 0 300px;
+  }
+  #seoul div p,
+  #gyeonggi div p,
+  #gyeongsang div p,
+  .modal div p,
+  #jeolla div p {
+    font-family: "Acme", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 30px 0;
+  }
+  #seoul div p:first-child:hover,
+  #gyeonggi div p:first-child:hover,
+  #gyeongsang div p:first-child:hover,
+  #jeolla div p:first-child:hover {
+    text-decoration: underline;
+    width: 755px;
+  }
+  .modal div p:first-child:hover {
+    text-decoration: underline;
+  }
+  #seoul img,
+  #gyeonggi img,
+  #gyeongsang img,
+  .modal img,
+  #jeolla img {
+    width: 700px;
+    height: 350px;
+  }
+  /* 모달 배경 */
+  .modalWrap {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* 배경 색상 */
+  }
+
+  /* 모달 콘텐츠 */
+  .modal {
+    position: relative;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    background-color: white;
+    justify-content: center;
+    display: flex;
+  }
+
+  /* 닫기 버튼 */
+  .close-modal {
+    color: #333;
+    position: absolute;
+    top: 5%;
+    right: 3%;
+    font-size: 20px;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+  }
+
+  .close-modal:hover,
+  .close-modal:focus {
+    color: #fff;
+    background-color: rgb(24, 24, 60);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* .wrap 요소 */
+  .wrap {
+    display: none; /* 기본적으로 숨겨진 상태 */
+  }
+  /*footer*/
+  footer {
+    width: 100%;
+    background-color: #000000;
+    color: #fff;
+    margin-top: 100px;
+  }
+
+  footer .fAll {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 50px;
+  }
+
+  footer .fMenu {
+    display: flex;
+    font-weight: bold;
+    gap: 20px;
+    cursor: pointer;
+  }
+  footer .fMenu li:hover {
+    color: #aaa;
+  }
+
+  footer h1 {
+    margin: 50px 0px 30px;
+    font-size: 50px;
+    font-family: "Archivo Black", sans-serif;
+  }
+
+  footer .fAll p {
+    font-size: 12px;
+  }
+
+  footer .icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+  }
+  footer .icons > li:hover {
+    opacity: 0.5;
+  }
+  footer .call p {
+    font-weight: bold;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  /* header */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 1000;
+    box-shadow: 0 10px 6px -6px #777;
+    background-color: #f5f5f5;
+  }
+
+  header ul {
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  header h1 {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 40px;
+    margin: 0 30px;
+  }
+
+  header li a {
+    font-family: "Antic Slab", serif;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  header h3 {
+    margin: 0;
+  }
+
+  /* visual */
+  #visual {
+    width: 100%;
+    height: calc(100vh - 80px); /* 헤더 높이만큼 빼기 */
+    margin-top: 80px; /* 헤더 높이만큼 여백 추가 */
+    position: relative;
+  }
+
+  #visual img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    object-position: top;
+    filter: brightness(50%);
+  }
+
+  #visual h2 {
+    position: absolute;
+    bottom: 450px;
+    left: 5%;
+    color: #fff;
+    font-size: 40px;
+    line-height: 1.2;
+    animation: B20px 0.5s linear;
+  }
+
+  @keyframes B20px {
+    0% {
+      bottom: 430px;
+    }
+    100% {
+      bottom: 450px;
+    }
+  }
+
+  /* seoul */
+  .wrap {
+    display: none;
+  }
+
+  #seoul {
+    padding: 40px 200px;
+    position: relative;
+  }
+
+  #seoul ul,
+  #gyeonggi ul,
+  #gyeongsang ul,
+  #chungcheong ul,
+  #jeolla ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+  }
+  #seoul h3 {
+    margin-top: -300px;
+  }
+  #seoul h3,
+  #gyeonggi h3,
+  #gyeongsang h3,
+  #chungcheong h3,
+  #jeolla h3 {
+    font-size: 40px;
+    font-family: "Acme", sans-serif;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+  }
+  #seoul ul li > a,
+  #gyeonggi ul li > a,
+  #gyeongsang ul li > a,
+  #chungcheong ul li > a,
+  #jeolla ul li > a {
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #ccc;
+    padding: 10px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.25s ease-in-out;
+    display: inline-block;
+    margin: 1rem;
+    position: relative;
+    width: 200px;
+    font-size: 15px;
+  }
+  #seoul ul li > a:hover,
+  #gyeonggi ul li > a:hover,
+  #gyeongsang ul li > a:hover,
+  #chungcheong ul li > a:hover,
+  #jeolla ul li > a:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  }
+  #seoul ul li > a.active,
+  #gyeonggi ul li > a.active,
+  #gyeongsang ul li > a.active,
+  #chungcheong ul li > a.active,
+  #jeolla ul li > a.active {
+    color: #127d00;
+    background-color: #f6fff9;
+  }
+  #seoul .wrap {
+    display: none;
+    position: absolute;
+    left: -20%;
+    z-index: 5;
+    background-color: #fff;
+  }
+  #gyeonggi .wrap,
+  #gyeongsang .wrap,
+  #jeolla .wrap {
+    display: none;
+    position: absolute;
+    left: -24%;
+    z-index: 5;
+    background-color: #fff;
+    width: 100%;
+    height: 600px;
+    padding: 0 300px;
+  }
+  #seoul div p,
+  #gyeonggi div p,
+  #gyeongsang div p,
+  .modal div p,
+  #jeolla div p {
+    font-family: "Acme", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 30px 0;
+  }
+  #seoul div p:first-child:hover,
+  #gyeonggi div p:first-child:hover,
+  #gyeongsang div p:first-child:hover,
+  #jeolla div p:first-child:hover {
+    text-decoration: underline;
+    width: 755px;
+  }
+  .modal div p:first-child:hover {
+    text-decoration: underline;
+  }
+  #seoul img,
+  #gyeonggi img,
+  #gyeongsang img,
+  .modal img,
+  #jeolla img {
+    width: 700px;
+    height: 350px;
+  }
+  /* 모달 배경 */
+  .modalWrap {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* 배경 색상 */
+  }
+
+  /* 모달 콘텐츠 */
+  .modal {
+    position: relative;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    background-color: white;
+    justify-content: center;
+    display: flex;
+  }
+
+  /* 닫기 버튼 */
+  .close-modal {
+    color: #333;
+    position: absolute;
+    top: 5%;
+    right: 3%;
+    font-size: 20px;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+  }
+
+  .close-modal:hover,
+  .close-modal:focus {
+    color: #fff;
+    background-color: rgb(24, 24, 60);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* .wrap 요소 */
+  .wrap {
+    display: none; /* 기본적으로 숨겨진 상태 */
+  }
+  /*footer*/
+  footer {
+    width: 100%;
+    background-color: #000000;
+    color: #fff;
+    margin-top: 100px;
+  }
+
+  footer .fAll {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 30px;
+  }
+
+  footer .fMenu {
+    display: flex;
+    font-weight: bold;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  footer .fMenu li:hover {
+    color: #aaa;
+  }
+
+  footer h1 {
+    margin: 40px 0px 30px;
+    font-size: 30px;
+    font-family: "Archivo Black", sans-serif;
+  }
+
+  footer .fAll p {
+    font-size: 10px;
+  }
+
+  footer .icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+  }
+  footer .icons > li:hover {
+    opacity: 0.5;
+  }
+  footer .call p {
+    font-weight: bold;
+  }
+}
+@media (max-width: 799px) {
+  /* header */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 10px 6px -6px #777;
+    background-color: #f5f5f5;
+  }
+
+  header ul {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+  }
+  header ul li {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  header h1 {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 20px;
+  }
+
+  header li a {
+    font-family: "Antic Slab", serif;
+  }
+
+  header h3 {
+    font-size: 11px;
+    padding: 0 -20px;
+  }
+
+  /* visual */
+  #visual {
+    width: 100%;
+    height: calc(100vh - 30px); /* 헤더 높이만큼 빼기 */
+    margin-top: 0px; /* 헤더 높이만큼 여백 추가 */
+    position: relative;
+  }
+
+  #visual img {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+    object-position: top;
+    filter: brightness(50%);
+  }
+
+  #visual h2 {
+    position: absolute;
+    bottom: 650px;
+    left: 5%;
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.2;
+    animation: B20px 0.5s linear;
+  }
+
+  @keyframes B20px {
+    0% {
+      bottom: 630px;
+    }
+    100% {
+      bottom: 650px;
+    }
+  }
+
+  /* seoul */
+  .wrap {
+    display: none;
+  }
+
+  #seoul,
+  #gyeonggi,
+  #gyeongsang,
+  #chungcheong,
+  #jeolla {
+    padding: 40px 200px;
+    position: relative;
+  }
+
+  #seoul ul,
+  #gyeonggi ul,
+  #gyeongsang ul,
+  #chungcheong ul,
+  #jeolla ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+  }
+  #seoul h3 {
+    margin-top: -600px;
+  }
+  #seoul h3,
+  #gyeonggi h3,
+  #gyeongsang h3,
+  #chungcheong h3,
+  #jeolla h3 {
+    width: 220px;
+    font-size: 20px;
+    font-family: "Acme", sans-serif;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    margin-left: -65px;
+  }
+  #seoul ul li > a,
+  #gyeonggi ul li > a,
+  #gyeongsang ul li > a,
+  #chungcheong ul li > a,
+  #jeolla ul li > a {
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #ccc;
+    padding: 15px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.25s ease-in-out;
+    display: inline-block;
+    margin: 1rem;
+    position: relative;
+    width: 260px;
+    font-size: 20px;
+  }
+  ul li {
+    width: 400%;
+  }
+  #seoul ul li > a:hover,
+  #gyeonggi ul li > a:hover,
+  #gyeongsang ul li > a:hover,
+  #chungcheong ul li > a:hover,
+  #jeolla ul li > a:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  }
+  #seoul ul li > a.active,
+  #gyeonggi ul li > a.active,
+  #gyeongsang ul li > a.active,
+  #chungcheong ul li > a.active,
+  #jeolla ul li > a.active {
+    color: #127d00;
+    background-color: #f6fff9;
+  }
+  #seoul .wrap {
+    display: none;
+    position: absolute;
+    left: -130%;
+    z-index: 5;
+    background-color: #fff;
+  }
+  #gyeonggi .wrap,
+  #gyeongsang .wrap,
+  #jeolla .wrap {
+    display: none;
+    position: absolute;
+    left: -250%;
+    z-index: 5;
+    background-color: #fff;
+    width: 400%;
+    height: 300px;
+    padding: 0 100px;
+  }
+  #seoul div p,
+  #gyeonggi div p,
+  #gyeongsang div p,
+  .modal div p,
+  #jeolla div p {
+    font-family: "Acme", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 0;
+  }
+  #seoul div p:first-child:hover,
+  #gyeonggi div p:first-child:hover,
+  #gyeongsang div p:first-child:hover,
+  #jeolla div p:first-child:hover {
+    text-decoration: underline;
+    width: 755px;
+  }
+  .modal div p:first-child:hover {
+    text-decoration: underline;
+  }
+  #seoul img,
+  #gyeonggi img,
+  #gyeongsang img,
+  .modal img,
+  #jeolla img {
+    width: 330px;
+    height: 150px;
+  }
+  /* 모달 배경 */
+  .modalWrap {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* 배경 색상 */
+  }
+
+  /* 모달 콘텐츠 */
+  .modal {
+    position: relative;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70%;
+    background-color: white;
+    justify-content: center;
+    display: flex;
+  }
+
+  /* 닫기 버튼 */
+  .close-modal {
+    color: #333;
+    position: absolute;
+    top: 3%;
+    right: 2%;
+    font-size: 10px;
+    font-weight: bold;
+    border: none;
+    padding: 3px 20px;
+    border-radius: 5px;
+  }
+
+  .close-modal:hover,
+  .close-modal:focus {
+    color: #fff;
+    background-color: rgb(24, 24, 60);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* .wrap 요소 */
+  .wrap {
+    display: none; /* 기본적으로 숨겨진 상태 */
+  }
+  /*footer*/
+  footer {
+    width: 100%;
+    background-color: #000000;
+    color: #fff;
+    margin-top: 100px;
+  }
+
+  footer .fAll {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px;
+  }
+
+  footer .fMenu {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    gap: 5px;
+    cursor: pointer;
+    font-size: 8px;
+  }
+  footer .fMenu li:hover {
+    color: #aaa;
+  }
+
+  footer h1 {
+    margin: 30px 0px 20px;
+    font-size: 20px;
+    font-family: "Archivo Black", sans-serif;
+  }
+
+  footer .fAll p {
+    font-size: 7px;
+    display: flex;
+  }
+  footer li.call {
+    margin-left: 30px;
+  }
+  footer .icons {
+    display: flex;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  footer .icons img {
+    width: 30px;
+  }
+  footer .icons > li:hover {
+    opacity: 0.5;
+  }
+  footer .call p {
+    font-weight: bold;
+  }
+}

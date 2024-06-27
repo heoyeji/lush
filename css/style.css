@@ -1,0 +1,2669 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  /* overflow-x: hidden; */
+}
+body {
+  overflow-x: hidden;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+@media (min-width: 1281px) {
+  /*header*/
+  header {
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+    box-shadow: 0 10px 6px -6px #777;
+  }
+  header ul {
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #f5f5f5;
+    align-items: center;
+  }
+  header h1 {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 50px;
+    margin-left: 40px;
+  }
+  header li a {
+    font-family: "Antic Slab", serif;
+  }
+  header h3 {
+    padding: 0 20px;
+  }
+  /*visual*/
+  #visual {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #000;
+  }
+  #visual a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+  }
+  #visual a > img {
+    width: 100%;
+    height: 100vh;
+  }
+  #visual .Vimg1 {
+    width: 100%;
+    height: 100vh;
+    background: url(../img/image-19.png);
+    background-size: cover;
+  }
+  #visual .Vimg1 img {
+    width: 100%;
+    height: 100%;
+  }
+  #visual .Vimg1 ul li:nth-of-type(1) {
+    width: 250px !important;
+    height: 300px !important;
+    position: absolute;
+    top: 49%;
+    left: 12%;
+    opacity: 0;
+    animation: spin 5s linear 0s infinite alternate;
+    opacity: 1;
+  }
+  #visual .Vimg1 ul li:nth-of-type(2) {
+    width: 250px !important;
+    height: 300px !important;
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    opacity: 0;
+    animation: spin 5s linear 0s infinite alternate;
+    opacity: 1;
+    animation-delay: 0.2s;
+  }
+  #visual .Vimg1 ul li:nth-of-type(3) {
+    width: 250px !important;
+    height: 300px !important;
+    position: absolute;
+    top: 12%;
+    right: -2%;
+    opacity: 0;
+    animation: spin 5s linear 0s infinite alternate;
+    opacity: 1;
+  }
+  #visual .Vimg1 ul li:nth-of-type(4) {
+    position: absolute;
+    top: 51%;
+    left: 0%;
+    opacity: 0;
+    animation: motion 0.8s linear 0s infinite alternate;
+    opacity: 1;
+  }
+
+  #visual .Vimg1 ul li:nth-of-type(5) {
+    position: absolute;
+    top: 18%;
+    left: 11%;
+    opacity: 0;
+    animation: motion 0.8s linear 0s infinite alternate;
+    opacity: 1;
+    animation-delay: 0.2s;
+  }
+  #visual .Vimg1 ul li:nth-of-type(6) {
+    position: absolute;
+    top: 44%;
+    left: 84%;
+    opacity: 0;
+    animation: motion 0.8s linear 0s infinite alternate;
+    opacity: 1;
+  }
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  #visual span {
+    position: absolute;
+    color: #fff;
+    font-weight: bold;
+  }
+  #visual .imgText1 {
+    top: 15%;
+    left: 21%;
+    font-size: 60px;
+    font-family: "DM Serif Display", serif;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+    animation-delay: 0.2s;
+  }
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  #visual .Vimg2 {
+    width: 100%;
+    height: 100vh;
+    background: url(../img/bcc1f104ff0f8c778924f09a831c30c8.jpg) 100%;
+    background-size: cover;
+  }
+  #visual .Vimg2 span {
+    left: 5%;
+    top: 80%;
+    font-size: 50px;
+    font-weight: normal;
+    line-height: 40px;
+    color: rgb(0, 119, 255);
+    font-family: "Nanum Pen Script";
+  }
+  #visual .Vimg2 img {
+    width: 100%;
+    height: 100%;
+  }
+  #visual ul {
+    display: flex;
+  }
+  #visual .Vimg2 ul li:nth-of-type(1) {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+    animation-delay: 0.2s;
+  }
+  #visual .Vimg2 ul li:nth-of-type(2) {
+    position: absolute;
+    left: 5%;
+    top: 15%;
+    animation: motion 0.8s linear 0s infinite alternate;
+  }
+  #visual .Vimg2 ul li:nth-of-type(3) {
+    position: absolute;
+    left: 30%;
+    top: 20%;
+    animation: motion 0.8s linear 0s infinite alternate;
+    animation-delay: 1s;
+  }
+  #visual .Vimg2 ul li:nth-of-type(4) {
+    position: absolute;
+    left: 70%;
+    top: 30%;
+    animation: motion 0.8s linear 0s infinite alternate;
+    animation-delay: 1s;
+  }
+  #visual .Vimg2 ul li:nth-of-type(5) {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    animation: motion 0.8s linear 0s infinite alternate;
+  }
+
+  @keyframes motion {
+    0% {
+      margin-top: 0px;
+    }
+    100% {
+      margin-top: 20px;
+    }
+  }
+  #visual .Vimg3 {
+    background: url(../img/image-110.png) 100%;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+  }
+  #visual .Vimg3 .soapT {
+    width: 600px;
+    height: 500px;
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    animation: grow 0.5s linear 0s infinite alternate;
+    transform: scale(1.2);
+  }
+  @keyframes grow {
+    0% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1.5); /* 최종적으로 크기를 늘리고자 하는 값 */
+    }
+  }
+  #visual .imgText3 {
+    left: 10%;
+    top: 30%;
+    font-size: 80px;
+    line-height: 100px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: fadeInFromTop 1s ease forwards;
+    font-family: "Archivo Black";
+  }
+  @keyframes fadeInFromTop {
+    0% {
+      opacity: 0;
+      transform: translateY(-50%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  #visual .imgText4 {
+    left: 30%;
+    top: 10%;
+    font-size: 40px;
+    color: rgb(152, 79, 39);
+    opacity: 0;
+    animation: slideInFromLeft 1s ease forwards;
+  }
+  #visual .imgText4 h2 {
+    color: #fff;
+    -webkit-text-stroke: 1px rgb(152, 79, 39);
+  }
+  @keyframes slideInFromLeft {
+    0% {
+      left: -100%; /* 시작 시 왼쪽 밖에 위치 */
+      opacity: 0;
+    }
+    100% {
+      left: 30%; /* 최종 위치 (왼쪽에서 나타나는 위치) */
+      opacity: 1;
+    }
+  }
+  /*container1*/
+  #container1 p {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 80px;
+  }
+  #container1 h2 {
+    color: #299f4b;
+    font-size: 60px;
+    font-family: "Koulen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    text-align: center;
+    margin-top: 30px;
+  }
+  #container1 img {
+    width: 100px;
+    margin-top: -100px;
+  }
+  #container1 .leap1 {
+    transform: rotate(-20deg);
+    position: absolute;
+    left: 20%;
+  }
+  #container1 .leap2 {
+    transform: rotate(20deg);
+    position: absolute;
+    right: 20%;
+  }
+  /*container2*/
+  #container2 {
+    text-align: center;
+    margin-top: 200px;
+    position: relative;
+    background-attachment: fixed;
+  }
+  .fixed {
+    /* 고정된 상태일 때의 스타일 */
+    position: fixed !important;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000; /* 다른 요소 위에 표시하기 위해 z-index 설정 */
+  }
+  #container2 h3 {
+    margin: 50px 0px;
+    font-size: 30px;
+    line-height: 50px;
+  }
+  #container2 span {
+    font-size: 100px;
+  }
+  #container2 .circle1 {
+    width: 50px;
+    position: absolute;
+    top: -10%;
+    left: 10%;
+    transition: 0.5s;
+  }
+  #container2 .circle1 img {
+    margin-bottom: 100px;
+  }
+  #container2 .circle1 img:hover,
+  #container2 .circle2 img:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  #container2 .circle2 {
+    width: 50px;
+    position: absolute;
+    top: 10%;
+    right: 18%;
+    transition: 0.5s;
+  }
+  #container2 .circle2 img {
+    margin-bottom: 100px;
+  }
+  /*container3*/
+  #container3 {
+    position: relative;
+  }
+  #container3 .con3bg {
+    width: 100%;
+    height: 100vh;
+    margin-top: 100px;
+  }
+  #container3 img {
+    position: absolute;
+  }
+  #container3 .sg1,
+  #container3 .sg2,
+  #container3 .sg3 {
+    width: 300px;
+    height: 300px;
+  }
+
+  #container3 .sg1 {
+    top: 600px;
+    /* left: -50%; */
+  }
+  #container3 div.trans1,
+  #container3 div.trans2,
+  #container3 div.trans3 {
+    position: absolute;
+    animation-iteration-count: infinite; /* 반복 설정 */
+    animation-duration: 10s;
+    animation-delay: 1s;
+    z-index: 20;
+  }
+  #container3 .trans1 {
+    animation-name: trans1;
+    transform: translateX(530px);
+  }
+  #container3 .trans2 {
+    animation-name: trans2;
+    transform: translateX(830px) translateY(-430px);
+  }
+  #container3 .trans3 {
+    animation-name: trans3;
+    transform: translateX(1120px) translateY(-390px);
+  }
+  @keyframes trans1 {
+    0% {
+      transform: translateX(530px);
+    }
+    35% {
+      transform: translateX(530px) translateY(-450px) translateX(300px);
+    }
+    70% {
+      transform: translateX(530px) translateY(-500px) translateX(300px)
+        translateY(550px) translateX(300px);
+    }
+    100% {
+      transform: translateX(530px) translateY(-550px) translateX(450px)
+        translateY(550px) translateX(450px) translateX(-900px);
+    }
+  }
+  @keyframes trans2 {
+    0% {
+      transform: translateX(830px) translateY(-430px);
+    }
+    35% {
+      transform: translateX(830px) translateY(-430px) translateX(150px)
+        translateY(450px) translateX(200px);
+    }
+    70% {
+      transform: translateX(830px) translateY(-430px) translateX(150px)
+        translateY(450px) translateX(200px) translateX(-700px);
+    }
+    /* 100% {
+      transform: translateX(830px) translateY(-430px) translateX(150px)
+        translateY(450px) translateX(200px) translateX(-700px)
+        translateY(-450px) translateX(350px);
+    } */
+  }
+  @keyframes trans3 {
+    0% {
+      transform: translateX(1120px) translateY(-390px);
+    }
+    35% {
+      transform: translateX(1120px) translateY(-390px) translateX(-680px);
+    }
+    70% {
+      transform: translateX(1120px) translateY(-390px) translateX(-680px)
+        translateY(-500px) translateX(300px);
+    }
+    /* 100% {
+      transform: translateX(1120px) translateY(-390px) translateX(150px)
+        translateY(450px) translateX(200px) translateX(-700px)
+        translateY(-450px) translateX(350px);
+    } */
+  }
+
+  #container3 .sg2 {
+    top: 580px;
+  }
+  #container3 .sg3 {
+    top: 1030px;
+  }
+  #container3 .arrow1,
+  #container3 .arrow2,
+  #container3 .arrow3 {
+    width: 200px;
+    height: 100px;
+  }
+  #container3 .arrow1 {
+    top: 450px;
+    transform: rotate(-50deg);
+    left: 35%;
+  }
+  #container3 .arrow2 {
+    top: 500px;
+    right: 35%;
+    transform: rotate(50deg);
+  }
+  #container3 .arrow3 {
+    top: 750px;
+    left: 45.8%;
+    transform: rotate(180deg);
+  }
+  .rolling {
+    display: flex;
+  }
+  .rolling ul {
+    display: flex;
+  }
+  .rolling li {
+    width: 130px;
+    position: relative;
+    top: 1053px;
+    background-color: #fff;
+  }
+  #round1 {
+    animation: left1 20s linear infinite;
+  }
+  #round2 {
+    animation: left2 20s linear infinite;
+  }
+
+  @keyframes left1 {
+    0% {
+      transform: translateX(0px);
+    }
+
+    100% {
+      transform: translateX(-1950px);
+    }
+  }
+  @keyframes left2 {
+    0% {
+      transform: translateX(0px);
+    }
+
+    100% {
+      transform: translateX(-1950px);
+    }
+  }
+  /*container4*/
+  #container4 {
+    position: relative;
+    top: 1500px;
+  }
+  #container4 img {
+    position: absolute;
+  }
+  #container4 .store {
+    left: 17%;
+    transform: translateX(-50%);
+    transform: scale(0.5);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  #container4 .store.active,
+  #container4 .rabit.active,
+  #container4 .textB.active {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  #container4 .rabit {
+    right: 10%;
+    top: 200px;
+    transform: scale(0.5);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+
+  #container4 .textB {
+    width: 500px;
+    height: 500px;
+    background-image: url(../img/말풍선.png);
+    background-repeat: no-repeat;
+    background-size: 500px;
+    position: absolute;
+    left: 50%;
+    top: 300px;
+    text-align: center;
+    color: #363641;
+    transform: scale(0.5);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  #container4 h3 {
+    font-size: 30px;
+    margin-top: 120px;
+  }
+  #container4 h4 {
+    font-family: "Acme", sans-serif;
+    font-size: 30px;
+    height: 50px;
+    line-height: 50px;
+    border: 4px solid #363641;
+    width: 250px;
+    border-radius: 30px;
+    background-color: #f2efef;
+    margin: 0px auto;
+    margin-top: 20px;
+  }
+  /*container5*/
+  #container5 {
+    margin-top: 2500px;
+    background-image: url(../img/image\ 21.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+  }
+  #container5 h2 {
+    font-family: "Koulen", sans-serif;
+
+    font-size: 250px;
+    color: #fff;
+
+    padding-left: 100px;
+  }
+  /*swiper*/
+
+  .swiper {
+    width: 50%;
+    height: 60%;
+    left: -10%;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 50%;
+    height: 60%;
+    object-fit: cover;
+  }
+  .swiper-button-next {
+    position: absolute;
+    top: 450px !important;
+    width: 60px !important;
+    height: 60px !important;
+    left: 60% !important;
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+
+    color: transparent !important;
+  }
+  .swiper-button-next i {
+    font-size: 65px;
+    color: #222 !important;
+  }
+  /*footer*/
+  footer {
+    background-color: #000000;
+    color: #fff;
+    margin-top: 400px;
+  }
+  footer .fAll {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 50px;
+  }
+  footer .fMenu {
+    display: flex;
+    font-weight: bold;
+    gap: 20px;
+    cursor: pointer;
+  }
+  footer .fMenu li:hover {
+    color: #aaa;
+  }
+  footer h1 {
+    margin: 50px 0px 30px;
+    font-size: 50px;
+    font-family: "Archivo Black", sans-serif;
+  }
+  footer .fAll p {
+    font-size: 12px;
+  }
+  footer .icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+  }
+  footer .icons > li:hover {
+    opacity: 0.5;
+  }
+  footer .call p {
+    font-weight: bold;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /*header*/
+  header {
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+    box-shadow: 0 10px 6px -6px #777;
+  }
+  header ul {
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #f5f5f5;
+    align-items: center;
+  }
+  header h1 {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 40px;
+    margin-left: 30px;
+  }
+  header li a {
+    font-family: "Antic Slab", serif;
+  }
+  header h3 {
+    font-size: 15px;
+  }
+  /*visual*/
+  #visual {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    background-color: #000;
+  }
+  #visual a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+  }
+  #visual a > img {
+    width: 100%;
+    height: 80vh;
+  }
+  #visual .Vimg1 {
+    width: 100%;
+    height: 60vh;
+    background: url(../img/image-19.png) 100% no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+  }
+  #visual .Vimg1 img {
+    width: 100%;
+    height: 100%;
+  }
+  #visual .Vimg1 ul li:nth-of-type(1) {
+    width: 150px !important;
+    height: 200px !important;
+    position: absolute;
+    top: 49%;
+    left: 10%;
+    opacity: 0;
+    animation: spin 5s linear 0s infinite alternate;
+    opacity: 1;
+  }
+  #visual .Vimg1 ul li:nth-of-type(2) {
+    width: 170px !important;
+    height: 180px !important;
+    position: absolute;
+    top: 25%;
+    left: 35%;
+    opacity: 0;
+    animation: spin 5s linear 0s infinite alternate;
+    opacity: 1;
+    animation-delay: 0.2s;
+  }
+  #visual .Vimg1 ul li:nth-of-type(3) {
+    width: 170px !important;
+    height: 180px !important;
+    position: absolute;
+    top: 12%;
+    right: 4%;
+    opacity: 0;
+    animation: spin 5s linear 0s infinite alternate;
+    opacity: 1;
+  }
+  #visual .Vimg1 ul li:nth-of-type(4) {
+    width: 130px !important;
+    height: 140px !important;
+    position: absolute;
+    top: 51%;
+    left: -2%;
+    opacity: 0;
+    animation: motion 0.8s linear 0s infinite alternate;
+    opacity: 1;
+  }
+
+  #visual .Vimg1 ul li:nth-of-type(5) {
+    width: 130px !important;
+    height: 140px !important;
+    position: absolute;
+    top: 15%;
+    left: 9%;
+    opacity: 0;
+    animation: motion 0.8s linear 0s infinite alternate;
+    opacity: 1;
+    animation-delay: 0.2s;
+  }
+  #visual .Vimg1 ul li:nth-of-type(6) {
+    width: 130px !important;
+    height: 140px !important;
+    position: absolute;
+    top: 43%;
+    left: 78%;
+    opacity: 0;
+    animation: motion 0.8s linear 0s infinite alternate;
+    opacity: 1;
+  }
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  #visual span {
+    position: absolute;
+    color: #fff;
+    font-weight: bold;
+  }
+  #visual .imgText1 {
+    top: 15%;
+    left: 21%;
+    font-size: 35px;
+    font-family: "DM Serif Display", serif;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+    animation-delay: 0.2s;
+  }
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  #visual .Vimg2 {
+    width: 120%;
+    height: 60vh;
+    background: url(../img/bcc1f104ff0f8c778924f09a831c30c8.jpg) 100%;
+    background-size: cover;
+  }
+  #visual .Vimg2 span {
+    left: 5%;
+    top: 85%;
+    font-size: 35px;
+    font-weight: normal;
+    line-height: 20px;
+    color: rgb(0, 119, 255);
+    font-family: "Nanum Pen Script";
+  }
+  #visual .Vimg2 img {
+    width: 50%;
+    height: 50%;
+  }
+  #visual .Vimg2 ul {
+    display: flex;
+  }
+  #visual .Vimg2 ul li:nth-of-type(1) {
+    position: absolute;
+    top: 60%;
+    left: 5%;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+    animation-delay: 0.2s;
+  }
+  #visual .Vimg2 ul li:nth-of-type(2) {
+    position: absolute;
+    left: 5%;
+    top: 25%;
+    animation: motion 0.8s linear 0s infinite alternate;
+  }
+  #visual .Vimg2 ul li:nth-of-type(3) {
+    position: absolute;
+    left: 30%;
+    top: 40%;
+    animation: motion 0.8s linear 0s infinite alternate;
+    animation-delay: 1s;
+  }
+  #visual .Vimg2 ul li:nth-of-type(4) {
+    position: absolute;
+    left: 60%;
+    top: 45%;
+    animation: motion 0.8s linear 0s infinite alternate;
+    animation-delay: 1s;
+  }
+  #visual .Vimg2 ul li:nth-of-type(5) {
+    position: absolute;
+    left: 45%;
+    top: 20%;
+    animation: motion 0.8s linear 0s infinite alternate;
+  }
+
+  @keyframes motion {
+    0% {
+      margin-top: 0px;
+    }
+    100% {
+      margin-top: 20px;
+    }
+  }
+  #visual .Vimg3 {
+    background: url(../img/image-110.png) 100%;
+    background-size: cover;
+    width: 100%;
+    height: 60vh;
+  }
+  #visual .Vimg3 .soapT {
+    width: 320px;
+    height: 320px;
+    position: absolute;
+    top: 30%;
+    right: 15%;
+    animation: grow 0.5s linear 0s infinite alternate;
+    transform: scale(1.2);
+  }
+  @keyframes grow {
+    0% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1.5); /* 최종적으로 크기를 늘리고자 하는 값 */
+    }
+  }
+  #visual .imgText3 {
+    left: 10%;
+    top: 30%;
+    font-size: 60px;
+    line-height: 80px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: fadeInFromTop 1s ease forwards;
+    font-family: "Archivo Black";
+  }
+  @keyframes fadeInFromTop {
+    0% {
+      opacity: 0;
+      transform: translateY(-50%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  #visual .Vimg4 img {
+    height: 60vh;
+    object-fit: fill;
+    background-position: bottom;
+  }
+  #visual .imgText4 {
+    left: 20%;
+    top: 10%;
+    font-size: 30px;
+    color: rgb(152, 79, 39);
+    opacity: 0;
+    animation: slideInFromLeft 1s ease forwards;
+  }
+  #visual .imgText4 h2 {
+    color: #fff;
+    -webkit-text-stroke: 1px rgb(152, 79, 39);
+  }
+  @keyframes slideInFromLeft {
+    0% {
+      left: -100%; /* 시작 시 왼쪽 밖에 위치 */
+      opacity: 0;
+    }
+    100% {
+      left: 20%; /* 최종 위치 (왼쪽에서 나타나는 위치) */
+      opacity: 1;
+    }
+  }
+  /*container1*/
+  #container1 p {
+    font-size: 25px;
+    text-align: center;
+    margin-top: 80px;
+  }
+  #container1 h2 {
+    color: #299f4b;
+    font-size: 60px;
+    font-family: "Koulen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    text-align: center;
+    margin-top: 30px;
+  }
+  #container1 img {
+    width: 50px;
+    margin-top: -100px;
+  }
+  #container1 .leap1 {
+    transform: rotate(-20deg);
+    position: absolute;
+    left: 20%;
+  }
+  #container1 .leap2 {
+    transform: rotate(20deg);
+    position: absolute;
+    right: 20%;
+  }
+  /*container2*/
+  #container2 {
+    text-align: center;
+    margin-top: 200px;
+    position: relative;
+    background-attachment: fixed;
+  }
+  .fixed {
+    /* 고정된 상태일 때의 스타일 */
+    position: fixed !important;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000; /* 다른 요소 위에 표시하기 위해 z-index 설정 */
+  }
+  #container2 h3 {
+    margin: 50px 0px;
+    font-size: 30px;
+    line-height: 100px;
+  }
+  #container2 span {
+    font-size: 100px;
+  }
+  #container2 .circle1 {
+    width: 50px;
+    position: absolute;
+    top: -10%;
+    left: 10%;
+    transition: 0.5s;
+  }
+  #container2 .circle1 img {
+    margin-bottom: 100px;
+    width: 160px;
+  }
+  #container2 .circle1 img:hover,
+  #container2 .circle2 img:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  #container2 .circle2 {
+    width: 50px;
+    position: absolute;
+    top: 10%;
+    right: 18%;
+    transition: 0.5s;
+  }
+  #container2 .circle2 img {
+    margin-bottom: 100px;
+    width: 160px;
+  }
+  /*container3*/
+  #container3 {
+    position: relative;
+  }
+  #container3 .con3bg {
+    width: 100%;
+    height: 94vh;
+    margin-top: 100px;
+  }
+  #container3 img {
+    position: absolute;
+  }
+  #container3 .sg1,
+  #container3 .sg2,
+  #container3 .sg3 {
+    width: 200px;
+    height: 200px;
+  }
+
+  #container3 .sg1 {
+    top: 600px;
+    /* left: -50%; */
+  }
+  #container3 div.trans1,
+  #container3 div.trans2,
+  #container3 div.trans3 {
+    position: absolute;
+    animation-iteration-count: infinite; /* 반복 설정 */
+    animation-duration: 10s;
+    animation-delay: 1s;
+    z-index: 20;
+  }
+  #container3 .trans1 {
+    animation-name: trans1;
+    transform: translateX(330px);
+  }
+  #container3 .trans2 {
+    animation-name: trans2;
+    transform: translateX(530px) translateY(-300px);
+  }
+  #container3 .trans3 {
+    animation-name: trans3;
+    transform: translateX(760px) translateY(-420px);
+  }
+  @keyframes trans1 {
+    0% {
+      transform: translateX(330px);
+    }
+    35% {
+      transform: translateX(330px) translateY(-326px) translateX(198px);
+    }
+    70% {
+      transform: translateX(330px) translateY(-326px) translateX(198px)
+        translateY(334px) translateX(236px);
+    }
+    /* 100% {
+      transform: translateX(330px) translateY(-400px) translateX(200px)
+        translateY(550px) translateX(450px) translateX(-900px);
+    } */
+  }
+  @keyframes trans2 {
+    0% {
+      transform: translateX(530px) translateY(-300px);
+    }
+    35% {
+      transform: translateX(530px) translateY(-300px) translateX(110px)
+        translateY(330px) translateX(120px);
+    }
+    70% {
+      transform: translateX(530px) translateY(-300px) translateX(110px)
+        translateY(330px) translateX(120px) translateX(-420px);
+    }
+    /* 100% {
+      transform: translateX(830px) translateY(-430px) translateX(150px)
+        translateY(450px) translateX(200px) translateX(-700px)
+        translateY(-450px) translateX(350px);
+    } */
+  }
+  @keyframes trans3 {
+    0% {
+      transform: translateX(760px) translateY(-420px);
+    }
+    35% {
+      transform: translateX(760px) translateY(-420px) translateX(-420px);
+    }
+    70% {
+      transform: translateX(760px) translateY(-420px) translateX(-420px)
+        translateY(-340px) translateX(190px);
+    }
+    /* 100% {
+      transform: translateX(1180px) translateY(-390px) translateX(150px)
+        translateY(450px) translateX(200px) translateX(-700px)
+        translateY(-450px) translateX(350px);
+    } */
+  }
+
+  #container3 .sg2 {
+    top: 580px;
+  }
+  #container3 .sg3 {
+    top: 1030px;
+  }
+  #container3 .arrow1,
+  #container3 .arrow2,
+  #container3 .arrow3 {
+    width: 150px;
+    height: 60px;
+  }
+  #container3 .arrow1 {
+    top: 500px;
+    transform: rotate(-55deg);
+    left: 35%;
+  }
+  #container3 .arrow2 {
+    top: 510px;
+    right: 35%;
+    transform: rotate(55deg);
+  }
+  #container3 .arrow3 {
+    top: 700px;
+    left: 44%;
+    transform: rotate(180deg);
+  }
+  .rolling {
+    display: flex;
+  }
+  .rolling ul {
+    display: flex;
+  }
+  .rolling li {
+    width: 130px;
+    position: relative;
+    top: 990px;
+    background-color: #fff;
+  }
+  #round1 {
+    animation: left1 20s linear infinite;
+  }
+  #round2 {
+    animation: left2 20s linear infinite;
+  }
+
+  @keyframes left1 {
+    0% {
+      transform: translateX(0px);
+    }
+
+    100% {
+      transform: translateX(-1950px);
+    }
+  }
+  @keyframes left2 {
+    0% {
+      transform: translateX(0px);
+    }
+
+    100% {
+      transform: translateX(-1950px);
+    }
+  }
+  /*container4*/
+  #container4 {
+    position: relative;
+    top: 1500px;
+  }
+  #container4 img {
+    position: absolute;
+  }
+  #container4 .store {
+    left: 5%;
+    width: 90%;
+    transform: translateX(-50%);
+    transform: scale(0.5);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  #container4 .store.active,
+  #container4 .rabit.active,
+  #container4 .textB.active {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  #container4 .rabit {
+    width: 20%;
+    right: 10%;
+    top: 300px;
+    transform: scale(0.5);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+
+  #container4 .textB {
+    width: 500px;
+    height: 500px;
+    background-image: url(../img/말풍선.png);
+    background-repeat: no-repeat;
+    background-size: 500px;
+    position: absolute;
+    left: 30%;
+    top: 200px;
+    text-align: center;
+    color: #363641;
+    transform: scale(0.5);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  #container4 h3 {
+    font-size: 25px;
+    margin-top: 120px;
+  }
+  #container4 h4 {
+    font-family: "Acme", sans-serif;
+    font-size: 25px;
+    height: 50px;
+    line-height: 50px;
+    border: 4px solid #363641;
+    width: 200px;
+    border-radius: 30px;
+    background-color: #f2efef;
+    margin: 0px auto;
+    margin-top: 20px;
+  }
+  /*container5*/
+  #container5 {
+    margin-top: 2500px;
+    background-image: url(../img/image\ 21.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+  }
+  #container5 h2 {
+    font-family: "Koulen", sans-serif;
+
+    font-size: 150px;
+    color: #fff;
+
+    padding-left: 100px;
+  }
+  /*swiper*/
+
+  .swiper {
+    width: 60%;
+    height: 70%;
+    left: -10%;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 60%;
+    height: 70%;
+    object-fit: cover;
+  }
+  .swiper-button-next {
+    position: absolute;
+    top: 450px !important;
+    width: 60px !important;
+    height: 60px !important;
+    left: 70% !important;
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+
+    color: transparent !important;
+  }
+  .swiper-button-next i {
+    font-size: 65px;
+    color: #222 !important;
+  }
+  /*footer*/
+  footer {
+    background-color: #000000;
+    color: #fff;
+    margin-top: 400px;
+  }
+  footer .fAll {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 50px;
+  }
+  footer .fMenu {
+    display: flex;
+    font-weight: bold;
+    gap: 20px;
+    cursor: pointer;
+  }
+  footer .fMenu li:hover {
+    color: #aaa;
+  }
+  footer h1 {
+    margin: 50px 0px 30px;
+    font-size: 50px;
+    font-family: "Archivo Black", sans-serif;
+  }
+  footer .fAll p {
+    font-size: 12px;
+  }
+  footer .icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+  }
+  footer .icons > li:hover {
+    opacity: 0.5;
+  }
+  footer .call p {
+    font-weight: bold;
+  }
+}
+@media (min-width: 520px) and (max-width: 1024px) {
+  /*header*/
+  header {
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+    box-shadow: 0 10px 6px -6px #777;
+  }
+  header ul {
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #f5f5f5;
+    align-items: center;
+  }
+  header h1 {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 40px;
+    margin-left: 30px;
+  }
+  header li a {
+    font-family: "Antic Slab", serif;
+  }
+  header h3 {
+    font-size: 15px;
+    padding: 0 20px;
+  }
+  /*visual*/
+  #visual {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    background-color: #000;
+  }
+  #visual a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+  }
+  #visual a > img {
+    width: 100%;
+    height: 50vh;
+  }
+  #visual .Vimg1 {
+    width: 100%;
+    height: 50vh;
+    background: url(../img/image-19.png) 100% no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+  }
+  #visual .Vimg1 img {
+    width: 100%;
+    height: 100%;
+  }
+  #visual .Vimg1 ul li:nth-of-type(1) {
+    width: 120px !important;
+    height: 150px !important;
+    position: absolute;
+    top: 48%;
+    left: 10%;
+    opacity: 0;
+    animation: spin 5s linear 0s infinite alternate;
+    opacity: 1;
+  }
+  #visual .Vimg1 ul li:nth-of-type(2) {
+    width: 120px !important;
+    height: 130px !important;
+    position: absolute;
+    top: 24%;
+    left: 36%;
+    opacity: 0;
+    animation: spin 5s linear 0s infinite alternate;
+    opacity: 1;
+    animation-delay: 0.2s;
+  }
+  #visual .Vimg1 ul li:nth-of-type(3) {
+    width: 120px !important;
+    height: 130px !important;
+    position: absolute;
+    top: 12%;
+    right: 4%;
+    opacity: 0;
+    animation: spin 5s linear 0s infinite alternate;
+    opacity: 1;
+  }
+  #visual .Vimg1 ul li:nth-of-type(4) {
+    width: 100px !important;
+    height: 110px !important;
+    position: absolute;
+    top: 51%;
+    left: -2%;
+    opacity: 0;
+    animation: motion 0.8s linear 0s infinite alternate;
+    opacity: 1;
+  }
+
+  #visual .Vimg1 ul li:nth-of-type(5) {
+    width: 100px !important;
+    height: 110px !important;
+    position: absolute;
+    top: 15%;
+    left: 9%;
+    opacity: 0;
+    animation: motion 0.8s linear 0s infinite alternate;
+    opacity: 1;
+    animation-delay: 0.2s;
+  }
+  #visual .Vimg1 ul li:nth-of-type(6) {
+    width: 100px !important;
+    height: 110px !important;
+    position: absolute;
+    top: 43%;
+    left: 78%;
+    opacity: 0;
+    animation: motion 0.8s linear 0s infinite alternate;
+    opacity: 1;
+  }
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  #visual span {
+    position: absolute;
+    color: #fff;
+    font-weight: bold;
+  }
+  #visual .imgText1 {
+    top: 15%;
+    left: 21%;
+    font-size: 30px;
+    font-family: "DM Serif Display", serif;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+    animation-delay: 0.2s;
+  }
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  #visual .Vimg2 {
+    width: 120%;
+    height: 50vh;
+    background: url(../img/bcc1f104ff0f8c778924f09a831c30c8.jpg) 100%;
+    background-size: cover;
+  }
+  #visual .Vimg2 span {
+    left: 5%;
+    top: 80%;
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 20px;
+    color: rgb(0, 119, 255);
+    font-family: "Nanum Pen Script";
+  }
+  #visual .Vimg2 img {
+    width: 30%;
+    height: 30%;
+  }
+  #visual .Vimg2 ul {
+    display: flex;
+  }
+  #visual .Vimg2 ul li:nth-of-type(1) {
+    position: absolute;
+    top: 60%;
+    left: 5%;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+    animation-delay: 0.2s;
+  }
+  #visual .Vimg2 ul li:nth-of-type(2) {
+    position: absolute;
+    left: 5%;
+    top: 25%;
+    animation: motion 0.8s linear 0s infinite alternate;
+  }
+  #visual .Vimg2 ul li:nth-of-type(3) {
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    animation: motion 0.8s linear 0s infinite alternate;
+    animation-delay: 1s;
+  }
+  #visual .Vimg2 ul li:nth-of-type(4) {
+    position: absolute;
+    left: 65%;
+    top: 55%;
+    width: 50%;
+    animation: motion 0.8s linear 0s infinite alternate;
+    animation-delay: 1s;
+  }
+  #visual .Vimg2 ul li:nth-of-type(5) {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    animation: motion 0.8s linear 0s infinite alternate;
+  }
+
+  @keyframes motion {
+    0% {
+      margin-top: 0px;
+    }
+    100% {
+      margin-top: 20px;
+    }
+  }
+  #visual .Vimg3 {
+    background: url(../img/image-110.png) 100%;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+  }
+  #visual .Vimg3 .soapT {
+    width: 280px;
+    height: 280px;
+    position: absolute;
+    top: 30%;
+    right: 15%;
+    animation: grow 0.5s linear 0s infinite alternate;
+    transform: scale(1.2);
+  }
+  @keyframes grow {
+    0% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1.5); /* 최종적으로 크기를 늘리고자 하는 값 */
+    }
+  }
+  #visual .imgText3 {
+    left: 10%;
+    top: 30%;
+    font-size: 50px;
+    line-height: 80px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: fadeInFromTop 1s ease forwards;
+    font-family: "Archivo Black";
+  }
+  @keyframes fadeInFromTop {
+    0% {
+      opacity: 0;
+      transform: translateY(-50%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  #visual .imgText4 {
+    left: 30%;
+    top: 12%;
+    font-size: 20px;
+    color: rgb(152, 79, 39);
+    opacity: 0;
+    animation: slideInFromLeft 1s ease forwards;
+  }
+  #visual .imgText4 h2 {
+    color: #fff;
+    -webkit-text-stroke: 1px rgb(152, 79, 39);
+  }
+  @keyframes slideInFromLeft {
+    0% {
+      left: -100%; /* 시작 시 왼쪽 밖에 위치 */
+      opacity: 0;
+    }
+    100% {
+      left: 30%; /* 최종 위치 (왼쪽에서 나타나는 위치) */
+      opacity: 1;
+    }
+  }
+  /*container1*/
+  #container1 p {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 80px;
+  }
+  #container1 h2 {
+    color: #299f4b;
+    font-size: 50px;
+    font-family: "Koulen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    text-align: center;
+    margin-top: 30px;
+  }
+  #container1 img {
+    width: 40px;
+    margin-top: -100px;
+  }
+  #container1 .leap1 {
+    transform: rotate(-20deg);
+    position: absolute;
+    left: 10%;
+  }
+  #container1 .leap2 {
+    transform: rotate(20deg);
+    position: absolute;
+    right: 10%;
+  }
+  /*container2*/
+  #container2 {
+    text-align: center;
+    margin-top: 100px;
+    position: relative;
+    background-attachment: fixed;
+  }
+  .fixed {
+    /* 고정된 상태일 때의 스타일 */
+    position: fixed !important;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000; /* 다른 요소 위에 표시하기 위해 z-index 설정 */
+  }
+  #container2 h3 {
+    margin: 50px 0px;
+    font-size: 25px;
+    line-height: 60px;
+  }
+  #container2 span {
+    font-size: 70px;
+  }
+  #container2 .circle1 {
+    width: 50px;
+    position: absolute;
+    top: -10%;
+    left: 10%;
+    transition: 0.5s;
+  }
+  #container2 .circle1 img {
+    margin-bottom: 100px;
+    width: 100px;
+  }
+  #container2 .circle1 img:hover,
+  #container2 .circle2 img:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  #container2 .circle2 {
+    width: 50px;
+    position: absolute;
+    top: 10%;
+    right: 18%;
+    transition: 0.5s;
+  }
+  #container2 .circle2 img {
+    margin-bottom: 100px;
+    width: 100px;
+  }
+  /*container3*/
+  #container3 {
+    position: relative;
+  }
+  #container3 .con3bg {
+    width: 100%;
+    height: 60vh;
+  }
+  #container3 img {
+    position: absolute;
+  }
+  #container3 .sg1,
+  #container3 .sg2,
+  #container3 .sg3 {
+    width: 150px;
+    height: 150px;
+  }
+
+  #container3 .sg1 {
+    top: 300px;
+    /* left: -50%; */
+  }
+  #container3 div.trans1,
+  #container3 div.trans2,
+  #container3 div.trans3 {
+    position: absolute;
+    animation-iteration-count: infinite; /* 반복 설정 */
+    animation-duration: 10s;
+    animation-delay: 1s;
+    z-index: 20;
+  }
+  #container3 .trans1 {
+    animation-name: trans1;
+    transform: translateX(180px);
+  }
+  #container3 .trans2 {
+    animation-name: trans2;
+    transform: translateX(380px) translateY(-550px);
+  }
+  #container3 .trans3 {
+    animation-name: trans3;
+    transform: translateX(580px) translateY(-720px);
+  }
+  @keyframes trans1 {
+    0% {
+      transform: translateX(180px);
+    }
+    35% {
+      transform: translateX(180px) translateY(-270px) translateX(210px);
+    }
+    70% {
+      transform: translateX(180px) translateY(-270px) translateX(210px)
+        translateY(275px) translateX(198px);
+    }
+  }
+  @keyframes trans2 {
+    0% {
+      transform: translateX(380px) translateY(-550px);
+    }
+    35% {
+      transform: translateX(380px) translateY(-550px) translateX(110px)
+        translateY(280px) translateX(90px);
+    }
+    70% {
+      transform: translateX(380px) translateY(-550px) translateX(110px)
+        translateY(280px) translateX(90px) translateX(-400px);
+    }
+  }
+  @keyframes trans3 {
+    0% {
+      transform: translateX(580px) translateY(-720px);
+    }
+    35% {
+      transform: translateX(580px) translateY(-720px) translateX(-400px);
+    }
+    70% {
+      transform: translateX(580px) translateY(-720px) translateX(-400px)
+        translateY(-280px) translateX(200px);
+    }
+  }
+
+  #container3 .sg2 {
+    top: 580px;
+  }
+  #container3 .sg3 {
+    top: 1030px;
+  }
+  #container3 .arrow1,
+  #container3 .arrow2,
+  #container3 .arrow3 {
+    width: 150px;
+    height: 60px;
+  }
+  #container3 .arrow1 {
+    top: 220px;
+    transform: rotate(-55deg);
+    left: 30%;
+  }
+  #container3 .arrow2 {
+    top: 220px;
+    right: 30%;
+    transform: rotate(55deg);
+  }
+  #container3 .arrow3 {
+    top: 350px;
+    left: 42%;
+    transform: rotate(180deg);
+  }
+  .rolling {
+    display: flex;
+  }
+  .rolling ul {
+    display: flex;
+  }
+  .rolling li {
+    width: 130px;
+    position: relative;
+    top: 570px;
+    background-color: #fff;
+  }
+  #round1 {
+    animation: left1 20s linear infinite;
+  }
+  #round2 {
+    animation: left2 20s linear infinite;
+  }
+
+  @keyframes left1 {
+    0% {
+      transform: translateX(0px);
+    }
+
+    100% {
+      transform: translateX(-1950px);
+    }
+  }
+  @keyframes left2 {
+    0% {
+      transform: translateX(0px);
+    }
+
+    100% {
+      transform: translateX(-1950px);
+    }
+  }
+  /*container4*/
+  #container4 {
+    position: relative;
+    top: 700px;
+  }
+  #container4 img {
+    position: absolute;
+  }
+  #container4 .store {
+    left: 5%;
+    width: 90%;
+    transform: translateX(-50%);
+    transform: scale(0.5);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  #container4 .store.active,
+  #container4 .rabit.active,
+  #container4 .textB.active {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  #container4 .rabit {
+    width: 20%;
+    right: 10%;
+    top: 200px;
+    transform: scale(0.5);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+
+  #container4 .textB {
+    width: 500px;
+    height: 500px;
+    background-image: url(../img/말풍선.png);
+    background-repeat: no-repeat;
+    background-size: 350px;
+    position: absolute;
+    left: 35%;
+    top: 200px;
+    text-align: center;
+    color: #363641;
+    transform: scale(0.5);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  #container4 h3 {
+    font-size: 20px;
+    margin-top: 90px;
+    margin-right: 150px;
+  }
+  #container4 h4 {
+    font-family: "Acme", sans-serif;
+    font-size: 20px;
+    height: 30px;
+    line-height: 30px;
+    border: 2px solid #363641;
+    width: 150px;
+    border-radius: 30px;
+    background-color: #f2efef;
+    margin: 0px auto;
+    margin-top: 20px;
+    margin-right: 250px;
+  }
+  /*container5*/
+  #container5 {
+    margin-top: 1400px;
+    background-image: url(../img/image\ 21.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+  }
+  #container5 h2 {
+    font-family: "Koulen", sans-serif;
+    font-size: 100px;
+    color: #fff;
+    padding-left: 100px;
+  }
+  /*swiper*/
+
+  .swiper {
+    width: 70%;
+    height: 80%;
+    left: -10%;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 70%;
+    height: 80%;
+    object-fit: cover;
+  }
+  .swiper-button-next {
+    position: absolute;
+    top: 450px !important;
+    width: 60px !important;
+    height: 60px !important;
+    left: 80% !important;
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+
+    color: transparent !important;
+  }
+  .swiper-button-next i {
+    font-size: 65px;
+    color: #222 !important;
+  }
+  /*footer*/
+  footer {
+    background-color: #000000;
+    color: #fff;
+    margin-top: 400px;
+  }
+  footer .fAll {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 10px;
+  }
+  footer .fMenu {
+    display: flex;
+    font-weight: bold;
+    gap: 20px;
+    cursor: pointer;
+    font-size: 10px;
+  }
+  footer .fMenu li:hover {
+    color: #aaa;
+  }
+  footer h1 {
+    margin: 50px 0px 30px;
+    font-size: 40px;
+    font-family: "Archivo Black", sans-serif;
+  }
+  footer .fAll p {
+    font-size: 8px;
+  }
+  footer .icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+  }
+  footer .icons > li:hover {
+    opacity: 0.5;
+  }
+  footer .call p {
+    font-weight: bold;
+  }
+}
+@media (max-width: 519px) {
+  /*header*/
+  header {
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+    box-shadow: 0 10px 6px -6px #777;
+  }
+  header ul {
+    height: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #f5f5f5;
+    align-items: center;
+  }
+  header h1 {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 20px;
+  }
+  header li a {
+    font-family: "Antic Slab", serif;
+  }
+  header h3 {
+    font-size: 11px;
+  }
+  /*visual*/
+  #visual {
+    position: relative;
+    width: 100%;
+    height: 25vh;
+    overflow: hidden;
+    background-color: #000;
+  }
+  #visual a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+  }
+  #visual a > img {
+    width: 100%;
+    height: 25vh;
+  }
+  #visual .Vimg1 {
+    width: 100%;
+    height: 25vh;
+    background: url(../img/image-19.png) 100% no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+  }
+  #visual .Vimg1 img {
+    width: 100%;
+    height: 100%;
+  }
+  #visual .Vimg1 ul li:nth-of-type(1) {
+    width: 50px !important;
+    height: 60px !important;
+    position: absolute;
+    top: 49%;
+    left: 9%;
+    opacity: 0;
+    animation: spin 5s linear 0s infinite alternate;
+    opacity: 1;
+  }
+  #visual .Vimg1 ul li:nth-of-type(2) {
+    width: 50px !important;
+    height: 60px !important;
+    position: absolute;
+    top: 25%;
+    left: 37%;
+    opacity: 0;
+    animation: spin 5s linear 0s infinite alternate;
+    opacity: 1;
+    animation-delay: 0.2s;
+  }
+  #visual .Vimg1 ul li:nth-of-type(3) {
+    width: 50px !important;
+    height: 60px !important;
+    position: absolute;
+    top: 12%;
+    right: 4%;
+    opacity: 0;
+    animation: spin 5s linear 0s infinite alternate;
+    opacity: 1;
+  }
+  #visual .Vimg1 ul li:nth-of-type(4) {
+    width: 50px !important;
+    height: 60px !important;
+    position: absolute;
+    top: 51%;
+    left: -3%;
+    opacity: 0;
+    animation: motion 0.8s linear 0s infinite alternate;
+    opacity: 1;
+  }
+
+  #visual .Vimg1 ul li:nth-of-type(5) {
+    width: 50px !important;
+    height: 60px !important;
+    position: absolute;
+    top: 15%;
+    left: 8%;
+    opacity: 0;
+    animation: motion 0.8s linear 0s infinite alternate;
+    opacity: 1;
+    animation-delay: 0.2s;
+  }
+  #visual .Vimg1 ul li:nth-of-type(6) {
+    width: 50px !important;
+    height: 60px !important;
+    position: absolute;
+    top: 43%;
+    left: 78%;
+    opacity: 0;
+    animation: motion 0.8s linear 0s infinite alternate;
+    opacity: 1;
+  }
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  #visual span {
+    position: absolute;
+    color: #fff;
+    font-weight: bold;
+  }
+  #visual .imgText1 {
+    top: 15%;
+    left: 21%;
+    font-size: 20px;
+    font-family: "DM Serif Display", serif;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+    animation-delay: 0.2s;
+  }
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  #visual .Vimg2 {
+    width: 150%;
+    height: 25vh;
+    background: url(../img/bcc1f104ff0f8c778924f09a831c30c8.jpg) 100%;
+    background-size: cover;
+  }
+  #visual .Vimg2 span {
+    left: 5%;
+    top: 75%;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 15px;
+    color: rgb(0, 119, 255);
+    font-family: "Nanum Pen Script";
+  }
+  #visual .Vimg2 img {
+    width: 20%;
+    height: 20%;
+  }
+  #visual .Vimg2 ul {
+    display: flex;
+  }
+  #visual .Vimg2 ul li:nth-of-type(1) {
+    position: absolute;
+    top: 55%;
+    left: 5%;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+    animation-delay: 0.2s;
+  }
+  #visual .Vimg2 ul li:nth-of-type(2) {
+    position: absolute;
+    left: 5%;
+    top: 18%;
+    animation: motion 0.8s linear 0s infinite alternate;
+  }
+  #visual .Vimg2 ul li:nth-of-type(3) {
+    position: absolute;
+    left: 25%;
+    top: 30%;
+    animation: motion 0.8s linear 0s infinite alternate;
+    animation-delay: 1s;
+  }
+  #visual .Vimg2 ul li:nth-of-type(4) {
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    width: 50%;
+    animation: motion 0.8s linear 0s infinite alternate;
+    animation-delay: 1s;
+  }
+  #visual .Vimg2 ul li:nth-of-type(5) {
+    position: absolute;
+    left: 55%;
+    top: 25%;
+    animation: motion 0.8s linear 0s infinite alternate;
+  }
+
+  @keyframes motion {
+    0% {
+      margin-top: 0px;
+    }
+    100% {
+      margin-top: 10px;
+    }
+  }
+  #visual .Vimg3 {
+    background: url(../img/image-110.png) 100%;
+    background-size: cover;
+    width: 100%;
+    height: 25vh;
+  }
+  #visual .Vimg3 .soapT {
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    top: 30%;
+    right: 15%;
+    animation: grow 0.5s linear 0s infinite alternate;
+    transform: scale(1.2);
+  }
+  @keyframes grow {
+    0% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1.5); /* 최종적으로 크기를 늘리고자 하는 값 */
+    }
+  }
+  #visual .imgText3 {
+    left: 10%;
+    top: 30%;
+    font-size: 30px;
+    line-height: 50px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: fadeInFromTop 1s ease forwards;
+    font-family: "Archivo Black";
+  }
+  @keyframes fadeInFromTop {
+    0% {
+      opacity: 0;
+      transform: translateY(-50%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  #visual .imgText4 {
+    left: 20%;
+    top: 15%;
+    font-size: 15px;
+    color: rgb(152, 79, 39);
+    opacity: 0;
+    animation: slideInFromLeft 1s ease forwards;
+  }
+  #visual .imgText4 h2 {
+    color: #fff;
+    -webkit-text-stroke: 1px rgb(152, 79, 39);
+  }
+  @keyframes slideInFromLeft {
+    0% {
+      left: -100%; /* 시작 시 왼쪽 밖에 위치 */
+      opacity: 0;
+    }
+    100% {
+      left: 20%; /* 최종 위치 (왼쪽에서 나타나는 위치) */
+      opacity: 1;
+    }
+  }
+  /*container1*/
+  #container1 p {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 80px;
+  }
+  #container1 h2 {
+    color: #299f4b;
+    font-size: 50px;
+    font-family: "Koulen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    text-align: center;
+    margin-top: 30px;
+  }
+  #container1 img {
+    width: 40px;
+    margin-top: -100px;
+    opacity: 0;
+  }
+  #container1 .leap1 {
+    transform: rotate(-20deg);
+    position: absolute;
+    left: 10%;
+  }
+  #container1 .leap2 {
+    transform: rotate(20deg);
+    position: absolute;
+    right: 10%;
+  }
+  /*container2*/
+  #container2 {
+    text-align: center;
+    margin-top: 100px;
+    position: relative;
+    background-attachment: fixed;
+  }
+  #container2 img {
+    width: 300px;
+  }
+  .fixed {
+    /* 고정된 상태일 때의 스타일 */
+    position: fixed !important;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000; /* 다른 요소 위에 표시하기 위해 z-index 설정 */
+  }
+  #container2 h3 {
+    margin: 30px 0px;
+    font-size: 15px;
+    line-height: 40px;
+  }
+  #container2 span {
+    font-size: 30px;
+  }
+  #container2 .lineH {
+    line-height: 100px !important;
+  }
+  #container2 .circle1 {
+    width: 50px;
+    position: absolute;
+    top: -10%;
+    left: 5%;
+    transition: 0.5s;
+  }
+  #container2 .circle1 img {
+    margin-bottom: 60px;
+    width: 60px;
+  }
+  #container2 .circle1 img:hover,
+  #container2 .circle2 img:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  #container2 .circle2 {
+    width: 50px;
+    position: absolute;
+    top: 10%;
+    right: 7%;
+    transition: 0.5s;
+  }
+  #container2 .circle2 img {
+    margin-bottom: 60px;
+    width: 60px;
+  }
+  /*container3*/
+  #container3 {
+    position: relative;
+  }
+  #container3 .con3bg {
+    width: 100%;
+    height: 40vh;
+  }
+  #container3 img {
+    position: absolute;
+  }
+  #container3 .sg1,
+  #container3 .sg2,
+  #container3 .sg3 {
+    width: 100px;
+    height: 100px;
+  }
+
+  #container3 .sg1 {
+    top: 220px;
+    /* left: -50%; */
+  }
+  #container3 div.trans1,
+  #container3 div.trans2,
+  #container3 div.trans3 {
+    position: absolute;
+    animation-iteration-count: infinite; /* 반복 설정 */
+    animation-duration: 10s;
+    animation-delay: 1s;
+    z-index: 20;
+  }
+  #container3 .trans1 {
+    animation-name: trans1;
+    transform: translateX(100px);
+  }
+  #container3 .trans2 {
+    animation-name: trans2;
+    transform: translateX(190px) translateY(-500px);
+  }
+  #container3 .trans3 {
+    animation-name: trans3;
+    transform: translateX(280px) translateY(-800px);
+  }
+  @keyframes trans1 {
+    0% {
+      transform: translateX(100px);
+    }
+    35% {
+      transform: translateX(100px) translateY(-140px) translateX(95px);
+    }
+    70% {
+      transform: translateX(100px) translateY(-140px) translateX(95px)
+        translateY(150px) translateX(80px);
+    }
+  }
+  @keyframes trans2 {
+    0% {
+      transform: translateX(190px) translateY(-500px);
+    }
+    35% {
+      transform: translateX(190px) translateY(-500px) translateX(30px)
+        translateY(150px) translateX(60px);
+    }
+    70% {
+      transform: translateX(190px) translateY(-500px) translateX(30px)
+        translateY(150px) translateX(60px) translateX(-200px);
+    }
+  }
+  @keyframes trans3 {
+    0% {
+      transform: translateX(280px) translateY(-800px);
+    }
+    35% {
+      transform: translateX(280px) translateY(-800px) translateX(-180px);
+    }
+    70% {
+      transform: translateX(280px) translateY(-800px) translateX(-180px)
+        translateY(-170px) translateX(90px);
+    }
+  }
+
+  #container3 .sg2 {
+    top: 580px;
+  }
+  #container3 .sg3 {
+    top: 1030px;
+  }
+  #container3 .arrow1,
+  #container3 .arrow2,
+  #container3 .arrow3 {
+    width: 80px;
+    height: 40px;
+  }
+  #container3 .arrow1 {
+    top: 180px;
+    transform: rotate(-55deg);
+    left: 30%;
+  }
+  #container3 .arrow2 {
+    top: 180px;
+    right: 30%;
+    transform: rotate(55deg);
+  }
+  #container3 .arrow3 {
+    top: 260px;
+    left: 41%;
+    transform: rotate(180deg);
+  }
+  .rolling {
+    display: flex;
+  }
+  .rolling ul {
+    display: flex;
+  }
+  .rolling li {
+    width: 130px;
+    position: relative;
+    top: 370px;
+    background-color: #fff;
+  }
+  #round1 {
+    animation: left1 20s linear infinite;
+  }
+  #round2 {
+    animation: left2 20s linear infinite;
+  }
+
+  @keyframes left1 {
+    0% {
+      transform: translateX(0px);
+    }
+
+    100% {
+      transform: translateX(-1950px);
+    }
+  }
+  @keyframes left2 {
+    0% {
+      transform: translateX(0px);
+    }
+
+    100% {
+      transform: translateX(-1950px);
+    }
+  }
+  /*container4*/
+  #container4 {
+    position: relative;
+    top: 500px;
+  }
+  #container4 img {
+    position: absolute;
+  }
+  #container4 .store {
+    left: 5%;
+    width: 90%;
+    transform: translateX(-50%);
+    transform: scale(0.5);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  #container4 .store.active,
+  #container4 .rabit.active,
+  #container4 .textB.active {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  #container4 .rabit {
+    width: 20%;
+    right: 10%;
+    top: 100px;
+    transform: scale(0.5);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+
+  #container4 .textB {
+    width: 500px;
+    height: 500px;
+    background-image: url(../img/말풍선.png);
+    background-repeat: no-repeat;
+    background-size: 200px;
+    position: absolute;
+    left: 35%;
+    top: 100px;
+    text-align: center;
+    color: #363641;
+    transform: scale(0.5);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  #container4 h3 {
+    font-size: 10px;
+    margin-top: 60px;
+    margin-right: 300px;
+  }
+  #container4 h4 {
+    font-family: "Acme", sans-serif;
+    font-size: 13px;
+    height: 20px;
+    line-height: 20px;
+    border: 2px solid #363641;
+    width: 80px;
+    border-radius: 30px;
+    background-color: #f2efef;
+    margin: 0px auto;
+    margin-top: 5px;
+    margin-right: 350px;
+  }
+  /*container5*/
+  #container5 {
+    margin-top: 900px;
+    background-image: url(../img/image\ 21.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30vh;
+  }
+  #container5 h2 {
+    font-family: "Koulen", sans-serif;
+    font-size: 50px;
+    color: #fff;
+    padding-left: 50px;
+  }
+  /*swiper*/
+
+  .swiper {
+    width: 70%;
+    height: 90%;
+    left: 10%;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 70%;
+    height: 90%;
+    object-fit: cover;
+  }
+  .swiper-button-next {
+    position: absolute;
+    top: 450px !important;
+    width: 60px !important;
+    height: 60px !important;
+    left: 80% !important;
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+
+    color: transparent !important;
+  }
+  .swiper-button-next i {
+    font-size: 65px;
+    color: #222 !important;
+  }
+  /*footer*/
+  footer {
+    background-color: #000000;
+    color: #fff;
+    margin-top: 200px;
+  }
+  footer .fAll {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px;
+    font-size: 10px;
+  }
+  footer .fMenu {
+    display: flex;
+    font-weight: bold;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 7px;
+  }
+  footer .fMenu li:hover {
+    color: #aaa;
+  }
+  footer h1 {
+    margin: 30px 0px 20px;
+    font-size: 20px;
+    font-family: "Archivo Black", sans-serif;
+  }
+  footer .fAll p {
+    font-size: 7px;
+  }
+  footer .icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  footer .icons img {
+    width: 30px;
+  }
+  footer .icons > li:hover {
+    opacity: 0.5;
+  }
+  footer .call p {
+    font-weight: bold;
+  }
+}
